@@ -26,6 +26,10 @@
 
 @import "tailwindcss";
 
+:root {
+   --gray-color-01: rgba(255, 255, 255, 0.60);
+
+}
 .satoshi {
    font-family: 'Satoshi-Regular';
 }
