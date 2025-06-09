@@ -262,9 +262,6 @@
     --tw-font-weight: var(--font-weight-extrabold);
     font-weight: var(--font-weight-extrabold);
   }
-  .text-blue-500 {
-    color: var(--color-blue-500);
-  }
   .text-white {
     color: var(--color-white);
   }
