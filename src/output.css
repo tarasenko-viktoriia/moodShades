@@ -1,5 +1,29 @@
 /*! tailwindcss v4.1.8 | MIT License | https://tailwindcss.com */
 @layer properties;
+@font-face {
+  font-family: 'IntegralCF-Bold';
+  src: url('/fonts/Fontspring-DEMO-integralcf-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'IntegralCF-Bold';
+  src: url('/fonts/Fontspring-DEMO-integralcf-extrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'IntegralCF-Bold';
+  src: url('/fonts/Fontspring-DEMO-integralcf-heavy.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi-Regular';
+  src: url('/fonts/Satoshi-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -247,30 +271,6 @@
   .uppercase {
     text-transform: uppercase;
   }
-}
-@font-face {
-  font-family: 'IntegralCF-Bold';
-  src: url('./fonts/Fontspring-DEMO-integralcf-bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'IntegralCF-Bold';
-  src: url('./fonts/Fontspring-DEMO-integralcf-extrabold.otf') format('opentype');
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'IntegralCF-Bold';
-  src: url('./fonts/Fontspring-DEMO-integralcf-heavy.otf') format('opentype');
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Satoshi-Regular';
-  src: url('./fonts/Satoshi-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
 }
 @property --tw-font-weight {
   syntax: "*";
