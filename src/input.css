@@ -1,5 +1,3 @@
-
-
 @font-face {
    font-family: 'IntegralCF-Bold';
    src: url('/fonts/Fontspring-DEMO-integralcf-bold.otf') format('opentype');
@@ -28,3 +26,9 @@
 
 @import "tailwindcss";
 
+.satoshi {
+   font-family: 'Satoshi-Regular';
+}
+.integral {
+   font-family: 'IntegralCF-Bold';
+}
