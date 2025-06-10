@@ -36,3 +36,12 @@
 .integral {
    font-family: 'IntegralCF-Bold';
 }
+
+@keyframes scroll {
+   0% { transform: translateX(0); }
+   100% { transform: translateX(-50%); }
+}
+
+.logos-track {
+   animation: scroll 30s linear infinite;
+}

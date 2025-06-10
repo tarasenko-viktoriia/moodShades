@@ -199,9 +199,6 @@
   .mx-\[-15px\] {
     margin-inline: -15px;
   }
-  .me-\[24px\] {
-    margin-inline-end: 24px;
-  }
   .mb-\[24px\] {
     margin-bottom: 24px;
   }
@@ -226,6 +223,9 @@
   .h-full {
     height: 100%;
   }
+  .max-h-\[786px\] {
+    max-height: 786px;
+  }
   .min-h-full {
     min-height: 100%;
   }
@@ -234,6 +234,9 @@
   }
   .w-full {
     width: 100%;
+  }
+  .w-max {
+    width: max-content;
   }
   .max-w-\[109rem\] {
     max-width: 109rem;
@@ -249,6 +252,9 @@
   }
   .border-collapse {
     border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .cursor-pointer {
     cursor: pointer;
@@ -276,6 +282,9 @@
   }
   .gap-\[80px\] {
     gap: 80px;
+  }
+  .gap-\[100px\] {
+    gap: 100px;
   }
   .overflow-clip {
     overflow: clip;
@@ -314,14 +323,20 @@
   .py-\[24px\] {
     padding-block: 24px;
   }
-  .py-\[140px\] {
-    padding-block: 140px;
-  }
-  .ps-\[140px\] {
-    padding-inline-start: 140px;
+  .py-\[46px\] {
+    padding-block: 46px;
   }
   .pt-\[140px\] {
     padding-top: 140px;
+  }
+  .pb-\[120px\] {
+    padding-bottom: 120px;
+  }
+  .pb-\[123px\] {
+    padding-bottom: 123px;
+  }
+  .pl-\[15px\] {
+    padding-left: 15px;
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -378,6 +393,37 @@
 .integral {
   font-family: 'IntegralCF-Bold';
 }
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.logos-track {
+  animation: scroll 30s linear infinite;
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -395,6 +441,11 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-outline-style: solid;
