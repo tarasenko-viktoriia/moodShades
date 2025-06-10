@@ -190,6 +190,27 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
+  .right-\[-50px\] {
+    right: -50px;
+  }
+  .right-\[-130px\] {
+    right: -130px;
+  }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
+  .left-\[-50px\] {
+    left: -50px;
+  }
+  .z-2 {
+    z-index: 2;
+  }
   .m-0 {
     margin: calc(var(--spacing) * 0);
   }
@@ -348,6 +369,10 @@
   .text-\[88px\] {
     font-size: 88px;
   }
+  .leading-\[100\%\] {
+    --tw-leading: 100%;
+    line-height: 100%;
+  }
   .font-black {
     --tw-font-weight: var(--font-weight-black);
     font-weight: var(--font-weight-black);
@@ -429,6 +454,10 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
@@ -447,6 +476,7 @@
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-border-style: solid;
+      --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-outline-style: solid;
     }
