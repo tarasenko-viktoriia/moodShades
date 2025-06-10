@@ -262,6 +262,9 @@
   .w-max {
     width: max-content;
   }
+  .max-w-\[56\.25rem\] {
+    max-width: 56.25rem;
+  }
   .max-w-\[109rem\] {
     max-width: 109rem;
   }
