@@ -52,6 +52,8 @@
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
     --font-weight-black: 900;
+    --radius-md: 0.375rem;
+    --radius-3xl: 1.5rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -226,6 +228,9 @@
   .mx-\[-15px\] {
     margin-inline: -15px;
   }
+  .mb-\[\.5rem\] {
+    margin-bottom: .5rem;
+  }
   .mb-\[24px\] {
     margin-bottom: 24px;
   }
@@ -238,8 +243,14 @@
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
   .aspect-\[880\/736\] {
     aspect-ratio: 880/736;
+  }
+  .h-\[1\.75rem\] {
+    height: 1.75rem;
   }
   .h-\[32px\] {
     height: 32px;
@@ -253,6 +264,9 @@
   .min-h-full {
     min-height: 100%;
   }
+  .w-\[1\.5rem\] {
+    width: 1.5rem;
+  }
   .w-\[55px\] {
     width: 55px;
   }
@@ -262,11 +276,14 @@
   .w-max {
     width: max-content;
   }
+  .max-w-\[45\.0625rem\] {
+    max-width: 45.0625rem;
+  }
   .max-w-\[56\.25rem\] {
     max-width: 56.25rem;
   }
-  .max-w-\[109rem\] {
-    max-width: 109rem;
+  .max-w-\[114\.375rem\] {
+    max-width: 114.375rem;
   }
   .max-w-\[817px\] {
     max-width: 817px;
@@ -283,17 +300,41 @@
   .cursor-pointer {
     cursor: pointer;
   }
+  .grid-cols-\[repeat\(auto-fit\,minmax\(290px\,1fr\)\)\] {
+    grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+  }
+  .grid-cols-\[repeat\(auto-fit\,minmax\(344px\,1fr\)\)\] {
+    grid-template-columns: repeat(auto-fit,minmax(344px,1fr));
+  }
   .flex-col {
     flex-direction: column;
   }
   .items-center {
     align-items: center;
   }
+  .items-start {
+    align-items: flex-start;
+  }
   .justify-between {
     justify-content: space-between;
   }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
+  }
+  .gap-\[\.625rem\] {
+    gap: .625rem;
+  }
+  .gap-\[1\.25rem\] {
+    gap: 1.25rem;
+  }
+  .gap-\[1rem\] {
+    gap: 1rem;
+  }
+  .gap-\[2rem\] {
+    gap: 2rem;
+  }
+  .gap-\[5rem\] {
+    gap: 5rem;
   }
   .gap-\[10px\] {
     gap: 10px;
@@ -307,14 +348,32 @@
   .gap-\[100px\] {
     gap: 100px;
   }
+  .self-end {
+    align-self: flex-end;
+  }
   .overflow-clip {
     overflow: clip;
   }
   .overflow-hidden {
     overflow: hidden;
   }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
+  }
+  .rounded-\[3\.875rem\] {
+    border-radius: 3.875rem;
+  }
   .rounded-\[62px\] {
     border-radius: 62px;
+  }
+  .rounded-md {
+    border-radius: var(--radius-md);
+  }
+  .bg-\[var\(--gray-color-02\)\] {
+    background-color: var(--gray-color-02);
+  }
+  .bg-\[var\(--red-color-02\)\] {
+    background-color: var(--red-color-02);
   }
   .bg-black {
     background-color: var(--color-black);
@@ -328,11 +387,32 @@
   .object-cover {
     object-fit: cover;
   }
+  .p-\[\.625rem\] {
+    padding: .625rem;
+  }
+  .px-\[\.9375rem\] {
+    padding-inline: .9375rem;
+  }
+  .px-\[2\.5rem\] {
+    padding-inline: 2.5rem;
+  }
+  .px-\[14px\] {
+    padding-inline: 14px;
+  }
   .px-\[15px\] {
     padding-inline: 15px;
   }
   .px-\[32px\] {
     padding-inline: 32px;
+  }
+  .py-\[3\.75rem\] {
+    padding-block: 3.75rem;
+  }
+  .py-\[6px\] {
+    padding-block: 6px;
+  }
+  .py-\[8\.75rem\] {
+    padding-block: 8.75rem;
   }
   .py-\[16px\] {
     padding-block: 16px;
@@ -346,6 +426,9 @@
   .pt-\[140px\] {
     padding-top: 140px;
   }
+  .pb-\[1\.5rem\] {
+    padding-bottom: 1.5rem;
+  }
   .pb-\[120px\] {
     padding-bottom: 120px;
   }
@@ -356,11 +439,27 @@
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
+  .text-\[\.75rem\] {
+    font-size: .75rem;
+  }
+  .text-\[1\.5rem\] {
+    font-size: 1.5rem;
+  }
+  .text-\[1\.25rem\] {
+    font-size: 1.25rem;
+  }
+  .text-\[3\.75rem\] {
+    font-size: 3.75rem;
+  }
   .text-\[40px\] {
     font-size: 40px;
   }
   .text-\[88px\] {
     font-size: 88px;
+  }
+  .leading-\[1\.15\] {
+    --tw-leading: 1.15;
+    line-height: 1.15;
   }
   .leading-\[100\%\] {
     --tw-leading: 100%;
@@ -382,8 +481,22 @@
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
   }
+  .tracking-\[\.015rem\] {
+    --tw-tracking: .015rem;
+    letter-spacing: .015rem;
+  }
+  .tracking-\[\.0375rem\] {
+    --tw-tracking: .0375rem;
+    letter-spacing: .0375rem;
+  }
   .text-\[var\(--gray-color-01\)\] {
     color: var(--gray-color-01);
+  }
+  .text-\[var\(--gray-color-03\)\] {
+    color: var(--gray-color-03);
+  }
+  .text-\[var\(--red-color-01\)\] {
+    color: var(--red-color-01);
   }
   .text-black {
     color: var(--color-black);
@@ -394,9 +507,22 @@
   .uppercase {
     text-transform: uppercase;
   }
+  .line-through {
+    text-decoration-line: line-through;
+  }
+  .decoration-\[var\(--gray-color-03\)\] {
+    text-decoration-color: var(--gray-color-03);
+  }
+  .decoration-\[1\.5px\] {
+    text-decoration-thickness: 1.5px;
+  }
 }
 :root {
   --gray-color-01: rgba(255, 255, 255, 0.60);
+  --gray-color-02: #F0F0F0;
+  --gray-color-03: rgba(0, 0, 0, 0.40);
+  --red-color-01: #F33;
+  --red-color-02: rgba(255, 51, 51, 0.10);
 }
 .satoshi {
   font-family: 'Satoshi';
@@ -443,6 +569,10 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -453,6 +583,7 @@
       --tw-skew-y: initial;
       --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-tracking: initial;
     }
   }
 }

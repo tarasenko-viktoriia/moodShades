@@ -40,7 +40,11 @@
 
 :root {
    --gray-color-01: rgba(255, 255, 255, 0.60);
+   --gray-color-02: #F0F0F0;
+   --gray-color-03: rgba(0, 0, 0, 0.40);
 
+   --red-color-01: #F33;
+   --red-color-02: rgba(255, 51, 51, 0.10);
 }
 .satoshi {
    font-family: 'Satoshi';
