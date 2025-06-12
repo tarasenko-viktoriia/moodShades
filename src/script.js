@@ -13,5 +13,21 @@ setInterval(() => {
 }, 3000);
 
 
-// const copy = document.querySelector(".logos-slide").cloneNode(true);
-// document.querySelector(".logos").appendChild(copy);
+const btn = document.getElementById("btn-view");
+const hiddenCards = document.querySelectorAll(".hidden-card")
+let isExpanded = false
+
+btn.addEventListener("click", () => {
+   hiddenCards.forEach(card => {
+      if (isExpanded) {
+         card.classList.remove("show")
+         setTimeout(() => card.style.display = "none", 300)
+      } else {
+         card.style.display = "flex"
+         setTimeout(() => card.classList.add("show"), 10)
+      }
+   })
+
+   btn.textContent = isExpanded ? "View All" : "Hide"
+   isExpanded = !isExpanded
+})

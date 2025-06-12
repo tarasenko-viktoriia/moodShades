@@ -39,6 +39,8 @@
 @import "tailwindcss";
 
 :root {
+   --black-color-01: rgba(0, 0, 0, 0.10);
+
    --gray-color-01: rgba(255, 255, 255, 0.60);
    --gray-color-02: #F0F0F0;
    --gray-color-03: rgba(0, 0, 0, 0.40);
@@ -60,4 +62,16 @@
 
 .logos-track {
    animation: scroll 30s linear infinite;
+}
+
+
+.hidden-card {
+   display: none;
+   opacity: 0;
+   transition: opacity 0.3s ease;
+}
+
+.hidden-card.show {
+   display: flex;
+   opacity: 1;
 }
