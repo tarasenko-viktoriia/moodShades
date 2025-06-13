@@ -47,6 +47,16 @@
 
    --red-color-01: #F33;
    --red-color-02: rgba(255, 51, 51, 0.10);
+   --red-color-03: #770505;
+
+   --blue-color-01: #0E1883;
+
+   --orange-color-01: #B85D12;
+
+   --cards: 3;
+   --cardHeight: 87vh;
+   --cardTopPadding: 1.5em;
+   --cardMargin: 4vw;
 }
 .satoshi {
    font-family: 'Satoshi';
@@ -74,4 +84,14 @@
 .hidden-card.show {
    display: flex;
    opacity: 1;
+}
+
+#card1{
+   --index: 1;
+}
+#card2{
+   --index: 2;
+}
+#card3{
+   --index: 3;
 }

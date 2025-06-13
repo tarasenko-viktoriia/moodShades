@@ -126,10 +126,41 @@
             </div>
          </section>
          <section class="bg-black text-white py-[8.75rem]">
-            <div class="max-w-[114.375rem] m-0 m-auto px-[.9375rem]">
+            <div class="max-w-[114.375rem] m-0 m-auto px-[.9375rem] flex flex-col gap-[5rem]">
                <div class="flex justify-between gap-[5rem] leading-[1.15]">
                   <h2 class="integral text-[3.75rem] uppercase font-bold tracking-[.0375rem]">Let Your Feelings Take the Spotlight</h2>
                   <p class="satoshi text-[var(--gray-color-01)] max-w-[45.0625rem] self-end">Your feelings are powerful — so why keep them hidden? MoodShades transforms every emotion into a statement, letting your mood shine through with vibrant, color-shifting lenses. It's not just smart eyewear — it's emotional technology designed to make self-expression effortless, intuitive, and bold. Whether you're calm, excited, or fired up, let the world see you — truly see you.</p>
+               </div>
+               <div class="w-full m-0 m-auto"> <!-- constainer -->
+                  <ul id="cards" class="pl-0 grid grid-cols-[1fr]
+                  grid-rows-[repeat(var(--cards),var(--cardHeight))]
+                  gap-[var(--cardMargin)]
+                  pb-[calc(var(--cards)*var(--cardTopPadding))]"><!-- constainer -->
+                     <li id="card1" class="sticky top-0 pt-[calc(var(--index)*var(--cardTopPadding))]"> <!-- card -->
+                        <div class="bg-[var(--blue-color-01)] box-border py-[2.5rem] px-[1.5rem] rounded-[1rem] h-[var(--cardHeight)]"> <!-- body -->
+                           <div class="flex flex-col gap-[1.5rem]">
+                              <h3 class="integral text-[40px] font-bold tracking-[.025rem] leading-[1.15]">Emotion meets innovation in every detail</h3>
+                              <p class="text-[var(--gray-color-01)] leading-[1.4] max-w-[65.125rem]">MoodShades are more than an accessory — they’re an atmosphere. Born from futuristic inspiration and built for the present moment, these glasses turn inner emotion into outer expression. If you feel it, you should show it — and now, you can wear it.</p>
+                           </div>
+                        </div>
+                     </li>
+                     <li id="card2" class="sticky top-0 pt-[calc(var(--index)*var(--cardTopPadding))]">
+                        <div class="bg-[var(--orange-color-01)] box-border py-[2.5rem] px-[1.5rem] rounded-[1rem] h-[var(--cardHeight)]">
+                           <div class="flex flex-col gap-[1.5rem]">
+                              <h3 class="integral text-[40px] font-bold tracking-[.025rem] leading-[1.15] ">Let your eyewear speak for you</h3>
+                              <p class="text-[var(--gray-color-01)] leading-[1.4] max-w-[55.0625rem]">MoodShades are for creators, empaths, and those who dare to feel deeply. In a world full of noise, your silence can still be seen. Sleek, expressive, and effortlessly wearable — these glasses are built to amplify what words sometimes can’t.</p>
+                           </div>
+                        </div>
+                     </li>
+                     <li id="card3" class="sticky top-0 pt-[calc(var(--index)*var(--cardTopPadding))]">
+                        <div class="bg-[var(--red-color-03)] box-border py-[2.5rem] px-[1.5rem] rounded-[1rem] h-[var(--cardHeight)]">
+                           <div class="flex flex-col gap-[1.5rem]">
+                              <h3 class="integral text-[40px] font-bold tracking-[.025rem] leading-[1.15] ">Turn your feelings into visible signals</h3>
+                              <p class="text-[var(--gray-color-01)] leading-[1.4] max-w-[1019px]">Our lenses don’t just change color — they become your second language. Red when you’re fired up. Blue when you’re calm and collected. Yellow when you're full of joy. No taps, no settings — just real-time reactions to how you feel. MoodShades turn every glance into a story.</p>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
                </div>
             </div>
          </section>
