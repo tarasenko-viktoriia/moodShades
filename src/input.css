@@ -40,6 +40,7 @@
 
 :root {
    --black-color-01: rgba(0, 0, 0, 0.10);
+   --black-color-01: #000104;
 
    --gray-color-01: rgba(255, 255, 255, 0.60);
    --gray-color-02: #F0F0F0;
@@ -54,7 +55,7 @@
    --orange-color-01: #B85D12;
 
    --cards: 3;
-   --cardHeight: 87vh;
+   --cardHeight: 95vh;
    --cardTopPadding: 1.5em;
    --cardMargin: 4vw;
 }
