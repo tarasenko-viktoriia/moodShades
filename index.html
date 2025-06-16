@@ -3,6 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
    <link href="src/output.css" rel="stylesheet">
    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
    <title>MoodShadest</title>
@@ -324,41 +325,98 @@
          </section>
          <section class="pb-[8.75rem]">
             <div class="max-w-[114.375rem] m-0 m-auto px-[.9375rem] ">
-               <div class="bg-black p-[6.25rem] rounded-[1.5rem] flex justify-between gap-[10px]">
-                  <h2  class="integral text-[3.75rem] uppercase font-bold tracking-[.0375rem] leading-[1.15] text-white max-w-[55rem]">New Drops. New Moods. Straight to You.</h2>
-                  <div class="flex flex-col gap-[.75rem]">
-                     <div class="relative h-[3.25rem]">
-                        <input
-                           placeholder="Enter your email address"
-                           type="email"
-                           class="w-full pl-12 pr-4 py-3 rounded-[3.875rem] bg-white satoshi"
-                        />
-                        <span class="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 bg-no-repeat bg-center bg-contain"
+               <div id="subscription-wrapper">
+                  <div class="bg-black p-[6.25rem] rounded-[1.5rem] flex justify-between gap-[10px]">
+                     <h2  class="integral text-[3.75rem] uppercase font-bold tracking-[.0375rem] leading-[1.15] text-white max-w-[55rem]">New Drops. New Moods. Straight to You.</h2>
+                     <div id="subscription" class="flex flex-col gap-[.75rem]">
+                        <div class="relative h-[3.25rem]">
+                           <input
+                              id="emailInput"
+                              placeholder="Enter your email address"
+                              type="email"
+                              class="w-full pl-12 pr-4 py-3 rounded-[3.875rem] bg-white satoshi border border-transparent transition-colors"
+                           />
+                           <span
+                              class="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 bg-no-repeat bg-center bg-contain"
                               style="background-image: url('src/img/icon/sms.svg');">
-                        </span>
-                     </div>
-                     <button class="satoshi shrink-0 bg-white cursor-pointer font-medium py-[1rem] px-[3.375rem] rounded-[3.875rem] leading-[20px]">Subscribe to Newsletter</button>
+                           </span>
+                        </div>
+                        <div class="flex flex-col gap-[.5rem]">
+                           <button
+                              id="subscribeBtn"
+                              class="satoshi shrink-0 bg-white cursor-pointer font-medium py-[1rem] px-[3.375rem] rounded-[3.875rem] leading-[20px]">
+                              Subscribe to Newsletter
+                           </button>
+                           <p id="message" class="text-[.625rem] self-center"></p>
+                        </div>
+                        </div>
                   </div>
                </div>
+               <!-- <div class="bg-black p-[6.25rem] rounded-[1.5rem] flex justify-center">
+                  <h2  class="integral text-[3.75rem] uppercase font-bold tracking-[.0375rem] leading-[1.15] text-white max-w-[55rem] text-center">You are In. Thanks for Subscribing</h2>
+               </div> -->
             </div>
          </section>
          <section class="pb-[8.75rem]">
             <div  class="max-w-[114.375rem] m-0 m-auto px-[.9375rem]">
-               <h2  class="integral text-[3.75rem] uppercase font-bold tracking-[.0375rem] leading-[1.15] text-black mb-[5rem]">Crafted Together, Felt Everywhere</h2>
-               <div class="flex">
-                  <div >
-                     <img class="max-w-[27.375rem] max-h-[37.5rem]" src="src/img/gif/gif-04.gif" alt="Gif">
-                  </div>
-                  <div>
-                     <img class="max-w-[27.375rem] max-h-[37.5rem]" src="src/img/gif/gif-05.gif" alt="Gif">
-                  </div>
-                  <div>
-                     <img class="max-w-[27.375rem] max-h-[37.5rem]" src="src/img/gif/gif-06.gif" alt="Gif">
-                  </div>
-                  <div>
-                     <img class="max-w-[27.375rem] max-h-[37.5rem]" src="src/img/gif/gif-07.gif" alt="Gif">
+               <div class="flex justify-between items-center mb-[5rem]">
+                  <h2  class="integral text-[3.75rem] uppercase font-bold tracking-[.0375rem] leading-[1.15] text-black ">Crafted Together, Felt Everywhere</h2>
+
+                  <div class="flex gap-[.75rem] items-center">
+                     <button type="button" class="slider-prev p-[.75rem]">
+                        <img class="w-[1.5rem] h-[1.5rem]" src="src/img/icon/small-arrow.svg" alt="Image">
+                     </button>
+                     <button type="button" class="slider-next p-[.75rem]">
+                        <img class="rotate-180 w-[1.5rem] h-[1.5rem]"  src="src/img/icon/small-arrow.svg" alt="Image">
+                     </button>
                   </div>
                </div>
+               <div class="swiper custom-slider w-full">
+                  <div class="swiper-wrapper">
+                        <div class="swiper-slide relative w-[27.375rem] h-[37.5rem] group video-wrapper">
+                           <video class="custom-video w-full h-full rounded-[1.5rem] object-cover" preload="metadata">
+                              <source src="src/img/video/video-01.webm" type="video/webm">
+                           </video>
+                           <div class="cursor-pointer play-button w-[2.75rem] h-[2.75rem] p-[10px] bg-black rounded-[.375rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-[.playing]:hidden">
+                              <img src="src/img/icon/play.svg" alt="Play">
+                           </div>
+                        </div>
+                        <div class=" swiper-slide relative w-[27.375rem] h-[37.5rem] group video-wrapper">
+                           <video class="custom-video w-full h-full rounded-[1.5rem] object-cover" preload="metadata">
+                              <source src="src/img/video/video-02.webm" type="video/webm">
+                           </video>
+                           <div class="cursor-pointer play-button w-[2.75rem] h-[2.75rem] p-[10px] bg-black rounded-[.375rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-[.playing]:hidden">
+                              <img src="src/img/icon/play.svg" alt="Play">
+                           </div>
+                        </div>
+                        <div class="swiper-slide relative w-[27.375rem] h-[37.5rem] group video-wrapper">
+                           <video class="custom-video w-full h-full rounded-[1.5rem] object-cover" preload="metadata">
+                              <source src="src/img/video/video-03.webm" type="video/webm">
+                           </video>
+                           <div class="cursor-pointer play-button w-[2.75rem] h-[2.75rem] p-[10px] bg-black rounded-[.375rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-[.playing]:hidden">
+                              <img src="src/img/icon/play.svg" alt="Play">
+                           </div>
+                        </div>
+                        <div class="swiper-slide relative w-[27.375rem] h-[37.5rem] group video-wrapper">
+                           <video class="custom-video w-full h-full rounded-[1.5rem] object-cover" preload="metadata">
+                              <source src="src/img/video/video-04.webm" type="video/webm">
+                           </video>
+                           <div class="cursor-pointer play-button w-[2.75rem] h-[2.75rem] p-[10px] bg-black rounded-[.375rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-[.playing]:hidden">
+                              <img src="src/img/icon/play.svg" alt="Play">
+                           </div>
+                        </div>
+                        <div class="swiper-slide relative w-[27.375rem] h-[37.5rem] group video-wrapper">
+                           <video class="custom-video w-full h-full rounded-[1.5rem] object-cover" preload="metadata">
+                              <source src="src/img/video/video-01.webm" type="video/webm">
+                           </video>
+                           <div class="cursor-pointer play-button w-[2.75rem] h-[2.75rem] p-[10px] bg-black rounded-[.375rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-[.playing]:hidden">
+                              <img src="src/img/icon/play.svg" alt="Play">
+                           </div>
+                        </div>
+                  </div>
+               </div>
+               <div class="slider-pagination flex gap-2"></div>
+            </div>
             </div>
          </section>
          <section class="bg-black">
@@ -452,6 +510,7 @@
          </div> <!--контейнер-->
       </footer>
    </div>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    <script src="src/script.js"></script>
 </body>
 </html>
