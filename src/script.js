@@ -91,91 +91,32 @@ window.addEventListener('load', () => {
 
 
 const emailInput = document.getElementById('emailInput');
-   const subscribeBtn = document.getElementById('subscribeBtn');
-   const message = document.getElementById('message');
-   const wrapper = document.getElementById('subscription-wrapper');
+const subscribeBtn = document.getElementById('subscribeBtn');
+const message = document.getElementById('message');
+
+const formBlock = document.getElementById('formBlock');
+const successBlock = document.getElementById('successBlock');
 
 function isValidEmail(email) {
    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-const formHTML = `
-   <div class="bg-black p-[6.25rem] rounded-[1.5rem] flex justify-between gap-[10px]">
-      <h2 class="integral text-[3.75rem] uppercase font-bold tracking-[.0375rem] leading-[1.15] text-white max-w-[55rem]">
-         New Drops. New Moods. Straight to You.
-      </h2>
-      <div id="subscription" class="flex flex-col gap-[.75rem]">
-         <div class="relative h-[3.25rem]">
-            <input
-               id="emailInput"
-               placeholder="Enter your email address"
-               type="email"
-               class="w-full pl-12 pr-4 py-3 rounded-[3.875rem] bg-white satoshi border border-transparent transition-colors"
-            />
-            <span
-               class="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 bg-no-repeat bg-center bg-contain"
-               style="background-image: url('src/img/icon/sms.svg');">
-            </span>
-         </div>
-         <div class="flex flex-col gap-[.5rem]">
-            <button
-               id="subscribeBtn"
-               class="satoshi shrink-0 bg-white cursor-pointer font-medium py-[1rem] px-[3.375rem] rounded-[3.875rem] leading-[20px]">
-               Subscribe to Newsletter
-            </button>
-            <p id="message" class="text-[.625rem] self-center"></p>
-         </div>
-         </div>
-      </div>
-`;
-
 subscribeBtn.addEventListener('click', () => {
    const email = emailInput.value.trim();
 
    if (isValidEmail(email)) {
-      wrapper.innerHTML = `
-         <div class="bg-black p-[6.25rem] rounded-[1.5rem] flex justify-center">
-            <h2 class="integral text-[3.75rem] uppercase font-bold tracking-[.0375rem] leading-[1.15] text-white max-w-[55rem] text-center">
-               You are In. Thanks for Subscribing
-            </h2>
-         </div>
-      `;
+      message.textContent = '';
+
+      formBlock.classList.add('hidden');
+      successBlock.classList.remove('hidden');
 
       setTimeout(() => {
-         wrapper.innerHTML = formHTML;
-         rebindSubscriptionHandler();
-         }, 5000);
-      } else {
-         message.textContent = 'Please enter a valid email address.';
-         message.style.color = 'red';
-         emailInput.classList.add('border-red-500');
-      }
+         successBlock.classList.add('hidden');
+         formBlock.classList.remove('hidden');
+         emailInput.value = '';
+      }, 5000);
+   } else {
+      message.textContent = 'Please enter a valid email address.';
+      message.style.color = 'red';
+   }
 });
-
-function rebindSubscriptionHandler() {
-   const emailInputNew = document.getElementById('emailInput');
-   const subscribeBtnNew = document.getElementById('subscribeBtn');
-   const messageNew = document.getElementById('message');
-
-   subscribeBtnNew.addEventListener('click', () => {
-      const email = emailInputNew.value.trim();
-
-      if (isValidEmail(email)) {
-         wrapper.innerHTML = `
-            <div class="bg-black p-[6.25rem] rounded-[1.5rem] flex justify-center">
-               <h2 class="integral text-[3.75rem] uppercase font-bold tracking-[.0375rem] leading-[1.15] text-white max-w-[55rem] text-center">
-               You are In. Thanks for Subscribing
-               </h2>
-            </div>
-         `;
-         setTimeout(() => {
-            wrapper.innerHTML = formHTML;
-            rebindSubscriptionHandler();
-         }, 5000);
-         } else {
-         messageNew.textContent = 'Please enter a valid email address.';
-         messageNew.style.color = 'red';
-         emailInputNew.classList.add('border-red-500');
-         }
-      });
-}
