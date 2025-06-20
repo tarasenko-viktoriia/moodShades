@@ -229,6 +229,15 @@
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
+  .top-\[-150px\] {
+    top: -150px;
+  }
+  .top-\[100px\] {
+    top: 100px;
+  }
+  .top-\[150px\] {
+    top: 150px;
+  }
   .right-\[-130px\] {
     right: -130px;
   }
@@ -379,6 +388,9 @@
   .max-w-\[8\.625rem\] {
     max-width: 8.625rem;
   }
+  .max-w-\[21\.875rem\] {
+    max-width: 21.875rem;
+  }
   .max-w-\[45\.0625rem\] {
     max-width: 45.0625rem;
   }
@@ -390,6 +402,9 @@
   }
   .max-w-\[56\.25rem\] {
     max-width: 56.25rem;
+  }
+  .max-w-\[61\.9375rem\] {
+    max-width: 61.9375rem;
   }
   .max-w-\[63\.6875rem\] {
     max-width: 63.6875rem;
@@ -409,17 +424,8 @@
   .flex-shrink {
     flex-shrink: 1;
   }
-  .flex-shrink-1 {
-    flex-shrink: 1;
-  }
-  .shrink {
-    flex-shrink: 1;
-  }
   .shrink-0 {
     flex-shrink: 0;
-  }
-  .shrink-1 {
-    flex-shrink: 1;
   }
   .flex-grow {
     flex-grow: 1;
@@ -461,8 +467,20 @@
   .grid-cols-\[1fr\] {
     grid-template-columns: 1fr;
   }
+  .grid-cols-\[repeat\(1\,1fr\)\] {
+    grid-template-columns: repeat(1,1fr);
+  }
+  .grid-cols-\[repeat\(5\,1fr\)\] {
+    grid-template-columns: repeat(5,1fr);
+  }
+  .grid-cols-\[repeat\(auto-fill\,minmax\(300px\,1fr\)\)\] {
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  }
   .grid-cols-\[repeat\(auto-fit\,minmax\(290px\,1fr\)\)\] {
     grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+  }
+  .grid-cols-\[repeat\(auto-fit\,minmax\(300px\,1fr\)\)\] {
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
   }
   .grid-cols-\[repeat\(auto-fit\,minmax\(344px\,1fr\)\)\] {
     grid-template-columns: repeat(auto-fit,minmax(344px,1fr));
@@ -503,14 +521,14 @@
   .gap-\[\.3125rem\] {
     gap: .3125rem;
   }
+  .gap-\[\.9375rem\] {
+    gap: .9375rem;
+  }
   .gap-\[1\.5rem\] {
     gap: 1.5rem;
   }
   .gap-\[1\.25rem\] {
     gap: 1.25rem;
-  }
-  .gap-\[1\.5625rem\] {
-    gap: 1.5625rem;
   }
   .gap-\[1rem\] {
     gap: 1rem;
@@ -530,8 +548,8 @@
   .gap-\[12px\] {
     gap: 12px;
   }
-  .gap-\[24px\] {
-    gap: 24px;
+  .gap-\[16px\] {
+    gap: 16px;
   }
   .gap-\[80px\] {
     gap: 80px;
@@ -680,14 +698,14 @@
   .px-\[1\.5rem\] {
     padding-inline: 1.5rem;
   }
+  .px-\[1\.25rem\] {
+    padding-inline: 1.25rem;
+  }
   .px-\[2\.5rem\] {
     padding-inline: 2.5rem;
   }
   .px-\[3\.375rem\] {
     padding-inline: 3.375rem;
-  }
-  .px-\[3\.3125rem\] {
-    padding-inline: 3.3125rem;
   }
   .px-\[14px\] {
     padding-inline: 14px;
@@ -710,9 +728,6 @@
   .py-\[3\.75rem\] {
     padding-block: 3.75rem;
   }
-  .py-\[6\.25rem\] {
-    padding-block: 6.25rem;
-  }
   .py-\[6px\] {
     padding-block: 6px;
   }
@@ -727,6 +742,9 @@
   }
   .py-\[46px\] {
     padding-block: 46px;
+  }
+  .py-\[60px\] {
+    padding-block: 60px;
   }
   .pt-\[1\.5rem\] {
     padding-top: 1.5rem;
@@ -839,6 +857,10 @@
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
   }
+  .tracking-\[\.02rem\] {
+    --tw-tracking: .02rem;
+    letter-spacing: .02rem;
+  }
   .tracking-\[\.015rem\] {
     --tw-tracking: .015rem;
     letter-spacing: .015rem;
@@ -924,6 +946,16 @@
       padding-inline: 1.75rem;
     }
   }
+  .sm\:px-\[2\.1875rem\] {
+    @media (width >= 40rem) {
+      padding-inline: 2.1875rem;
+    }
+  }
+  .sm\:py-\[4\.6875rem\] {
+    @media (width >= 40rem) {
+      padding-block: 4.6875rem;
+    }
+  }
   .sm\:pb-\[4\.6875rem\] {
     @media (width >= 40rem) {
       padding-bottom: 4.6875rem;
@@ -934,6 +966,16 @@
       font-size: 2.5rem;
     }
   }
+  .md\:m-0 {
+    @media (width >= 48rem) {
+      margin: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:m-auto {
+    @media (width >= 48rem) {
+      margin: auto;
+    }
+  }
   .md\:mb-0 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 0);
@@ -942,6 +984,11 @@
   .md\:mb-\[3\.75rem\] {
     @media (width >= 48rem) {
       margin-bottom: 3.75rem;
+    }
+  }
+  .md\:mb-\[3\.125rem\] {
+    @media (width >= 48rem) {
+      margin-bottom: 3.125rem;
     }
   }
   .md\:flex {
@@ -959,14 +1006,24 @@
       width: 5.625rem;
     }
   }
+  .md\:w-auto {
+    @media (width >= 48rem) {
+      width: auto;
+    }
+  }
+  .md\:max-w-\[21\.875rem\] {
+    @media (width >= 48rem) {
+      max-width: 21.875rem;
+    }
+  }
+  .md\:shrink-1 {
+    @media (width >= 48rem) {
+      flex-shrink: 1;
+    }
+  }
   .md\:flex-row {
     @media (width >= 48rem) {
       flex-direction: row;
-    }
-  }
-  .md\:justify-around {
-    @media (width >= 48rem) {
-      justify-content: space-around;
     }
   }
   .md\:gap-\[\.625rem\] {
@@ -974,9 +1031,29 @@
       gap: .625rem;
     }
   }
+  .md\:gap-\[\.9375rem\] {
+    @media (width >= 48rem) {
+      gap: .9375rem;
+    }
+  }
+  .md\:gap-\[1\.625rem\] {
+    @media (width >= 48rem) {
+      gap: 1.625rem;
+    }
+  }
+  .md\:gap-\[3\.125rem\] {
+    @media (width >= 48rem) {
+      gap: 3.125rem;
+    }
+  }
   .md\:px-\[2\.1875rem\] {
     @media (width >= 48rem) {
       padding-inline: 2.1875rem;
+    }
+  }
+  .md\:px-\[2\.8125rem\] {
+    @media (width >= 48rem) {
+      padding-inline: 2.8125rem;
     }
   }
   .md\:py-\[4\.375rem\] {
@@ -984,9 +1061,9 @@
       padding-block: 4.375rem;
     }
   }
-  .md\:pb-\[4\.375rem\] {
+  .md\:py-\[5\.9375rem\] {
     @media (width >= 48rem) {
-      padding-bottom: 4.375rem;
+      padding-block: 5.9375rem;
     }
   }
   .md\:pb-\[5\.9375rem\] {
@@ -1007,6 +1084,11 @@
   .md\:text-\[2\.8125rem\] {
     @media (width >= 48rem) {
       font-size: 2.8125rem;
+    }
+  }
+  .lg\:mb-\[3\.75rem\] {
+    @media (width >= 64rem) {
+      margin-bottom: 3.75rem;
     }
   }
   .lg\:mb-\[4\.375rem\] {
@@ -1049,6 +1131,16 @@
       gap: 1.25rem;
     }
   }
+  .lg\:gap-\[2\.25rem\] {
+    @media (width >= 64rem) {
+      gap: 2.25rem;
+    }
+  }
+  .lg\:gap-\[3\.75rem\] {
+    @media (width >= 64rem) {
+      gap: 3.75rem;
+    }
+  }
   .lg\:justify-self-end {
     @media (width >= 64rem) {
       justify-self: flex-end;
@@ -1059,14 +1151,19 @@
       padding-inline: 2.8125rem;
     }
   }
+  .lg\:px-\[4\.0625rem\] {
+    @media (width >= 64rem) {
+      padding-inline: 4.0625rem;
+    }
+  }
   .lg\:py-\[5rem\] {
     @media (width >= 64rem) {
       padding-block: 5rem;
     }
   }
-  .lg\:pb-\[5rem\] {
+  .lg\:py-\[6\.875rem\] {
     @media (width >= 64rem) {
-      padding-bottom: 5rem;
+      padding-block: 6.875rem;
     }
   }
   .lg\:pb-\[6\.875rem\] {
@@ -1084,6 +1181,11 @@
       font-size: 1rem;
     }
   }
+  .xl\:mb-\[4\.375rem\] {
+    @media (width >= 80rem) {
+      margin-bottom: 4.375rem;
+    }
+  }
   .xl\:mb-\[5rem\] {
     @media (width >= 80rem) {
       margin-bottom: 5rem;
@@ -1094,14 +1196,34 @@
       width: 7.8125rem;
     }
   }
+  .xl\:max-w-\[45\.0625rem\] {
+    @media (width >= 80rem) {
+      max-width: 45.0625rem;
+    }
+  }
+  .xl\:max-w-\[61\.9375rem\] {
+    @media (width >= 80rem) {
+      max-width: 61.9375rem;
+    }
+  }
+  .xl\:grid-cols-\[repeat\(4\,1fr\)\] {
+    @media (width >= 80rem) {
+      grid-template-columns: repeat(4,1fr);
+    }
+  }
+  .xl\:flex-row {
+    @media (width >= 80rem) {
+      flex-direction: row;
+    }
+  }
   .xl\:items-center {
     @media (width >= 80rem) {
       align-items: center;
     }
   }
-  .xl\:justify-around {
+  .xl\:justify-between {
     @media (width >= 80rem) {
-      justify-content: space-around;
+      justify-content: space-between;
     }
   }
   .xl\:gap-\[1\.5625rem\] {
@@ -1114,9 +1236,24 @@
       gap: 2.5rem;
     }
   }
+  .xl\:gap-\[2\.875rem\] {
+    @media (width >= 80rem) {
+      gap: 2.875rem;
+    }
+  }
+  .xl\:gap-\[4\.375rem\] {
+    @media (width >= 80rem) {
+      gap: 4.375rem;
+    }
+  }
   .xl\:px-\[3\.3125rem\] {
     @media (width >= 80rem) {
       padding-inline: 3.3125rem;
+    }
+  }
+  .xl\:px-\[5\.3125rem\] {
+    @media (width >= 80rem) {
+      padding-inline: 5.3125rem;
     }
   }
   .xl\:py-\[5\.625rem\] {
@@ -1124,14 +1261,14 @@
       padding-block: 5.625rem;
     }
   }
+  .xl\:py-\[7\.8125rem\] {
+    @media (width >= 80rem) {
+      padding-block: 7.8125rem;
+    }
+  }
   .xl\:pb-\[3\.75rem\] {
     @media (width >= 80rem) {
       padding-bottom: 3.75rem;
-    }
-  }
-  .xl\:pb-\[5\.625rem\] {
-    @media (width >= 80rem) {
-      padding-bottom: 5.625rem;
     }
   }
   .xl\:pb-\[7\.8125rem\] {
@@ -1144,9 +1281,25 @@
       font-size: 3.125rem;
     }
   }
+  .xl\:tracking-\[\.0375rem\] {
+    @media (width >= 80rem) {
+      --tw-tracking: .0375rem;
+      letter-spacing: .0375rem;
+    }
+  }
+  .\32 xl\:mb-\[5rem\] {
+    @media (width >= 96rem) {
+      margin-bottom: 5rem;
+    }
+  }
   .\32 xl\:w-\[8\.625rem\] {
     @media (width >= 96rem) {
       width: 8.625rem;
+    }
+  }
+  .\32 xl\:grid-cols-\[repeat\(5\,1fr\)\] {
+    @media (width >= 96rem) {
+      grid-template-columns: repeat(5,1fr);
     }
   }
   .\32 xl\:gap-\[1\.875rem\] {
@@ -1154,9 +1307,29 @@
       gap: 1.875rem;
     }
   }
+  .\32 xl\:gap-\[3\.5rem\] {
+    @media (width >= 96rem) {
+      gap: 3.5rem;
+    }
+  }
+  .\32 xl\:gap-\[5rem\] {
+    @media (width >= 96rem) {
+      gap: 5rem;
+    }
+  }
+  .\32 xl\:px-\[6\.25rem\] {
+    @media (width >= 96rem) {
+      padding-inline: 6.25rem;
+    }
+  }
   .\32 xl\:py-\[6\.25rem\] {
     @media (width >= 96rem) {
       padding-block: 6.25rem;
+    }
+  }
+  .\32 xl\:py-\[8\.75rem\] {
+    @media (width >= 96rem) {
+      padding-block: 8.75rem;
     }
   }
   .\32 xl\:pb-\[6\.25rem\] {
@@ -1179,6 +1352,21 @@
       font-size: 3.4375rem;
     }
   }
+  .\[min-width\:1656px\]\:grid-cols-\[repeat\(4\,1fr\)\] {
+    &:is(min-width:1656px) {
+      grid-template-columns: repeat(4,1fr);
+    }
+  }
+  .\[min-width\:1656px\]\:grid-cols-\[repeat\(5\,1fr\)\] {
+    &:is(min-width:1656px) {
+      grid-template-columns: repeat(5,1fr);
+    }
+  }
+  .\[min-width\:1657px\]\:grid-cols-\[repeat\(5\,1fr\)\] {
+    &:is(min-width:1657px) {
+      grid-template-columns: repeat(5,1fr);
+    }
+  }
 }
 :root {
   --black-color-01: rgba(0, 0, 0, 0.10);
@@ -1193,7 +1381,7 @@
   --blue-color-01: #0E1883;
   --orange-color-01: #B85D12;
   --cards: 3;
-  --cardHeight: 95vh;
+  --cardHeight: 87vh;
   --cardTopPadding: 1.5em;
   --cardMargin: 4vw;
 }
