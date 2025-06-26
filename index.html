@@ -10,7 +10,7 @@
 </head>
 <body>
    <div class="min-h-full overflow-clip flex flex-col">
-      <header class="py-[24px] sticky h-100% top-0 left-0 z-50 bg-[var(--gray-color-04)] backdrop-blur-[1.25rem]">
+      <!-- <header class="py-[24px] sticky h-100% top-0 left-0 z-50 bg-[var(--gray-color-04)] backdrop-blur-[1.25rem]">
          <div class="max-w-[114.375rem] m-0 m-auto px-[15px]">
             <div class="flex items-center justify-between gap-[10px]">
                <div class="flex gap-[12px]">
@@ -38,34 +38,45 @@
                   <button type='button'><span></span></button>
                </div>
             </div>
-         </div> <!--контейнер-->
-      </header> 
+         </div> 
+      </header>  -->
+      <header class="py-6 sticky top-0 left-0 w-full z-50 bg-[var(--gray-color-04)] backdrop-blur-[1.25rem]">
+         <div class="max-w-[114.375rem] mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center gap-3 z-50">
+               <img class="w-[55px] h-[32px]" src="src/img/logo.png" alt="Logo" />
+               <span class="integral uppercase text-2xl font-extrabold">MDSh</span>
+            </div>
+            <nav class="hidden md:block">
+               <ul class="flex gap-[80px] satoshi">
+               <li><a href="#">Home</a></li>
+               <li><a href="#">About</a></li>
+               <li><a href="#">New Collection</a></li>
+               <li><a href="#">Collaboration</a></li>
+               </ul>
+            </nav>
+            <button class="hidden md:inline-block bg-black text-white px-8 py-4 rounded-[62px] satoshi font-medium">
+               Shop MoodShades
+            </button>
+            <button id="burger" aria-label="Open menu" class="relative z-[60] w-8 h-6 z-20 md:hidden group">
+               <span class="absolute block w-full h-0.5 bg-black transition-all duration-300 top-0 group-[.open]:top-3 group-[.open]:rotate-45"></span>
+               <span class="absolute block w-full h-0.5 bg-black transition-all duration-300 top-1/2 -translate-y-1/2 group-[.open]:opacity-0"></span>
+               <span class="absolute block w-full h-0.5 bg-black transition-all duration-300 bottom-0 group-[.open]:bottom-3 group-[.open]:-rotate-45"></span>
+            </button>
+         </div>
+         <div id="mobileMenu" class="fixed inset-0 h-[100vh] p-[50px] z-40 bg-white flex flex-col justify-center gap-10 satoshi translate-x-full transition-transform duration-300 md:hidden">
+            <ul class="flex flex-col gap-8 text-2xl ">
+               <li><a href="#">Home</a></li>
+               <li><a href="#">About</a></li>
+               <li><a href="#">New Collection</a></li>
+               <li><a href="#">Collaboration</a></li>
+            </ul>
+            <button class="bg-black text-white px-8 py-4 rounded-[62px] satoshi font-medium">
+               Shop MoodShades
+            </button>
+         </div>
+      </header>
       <main class="flex-grow">
          <section class="satoshi overflow-hidden text-white bg-[linear-gradient(90deg,_#000_0%,_#000_46.42%,_#0A0303_100%)]">
-            <!-- <div class="flex justify-between gap-1 max-w-[114.375rem] m-0 m-auto px-[15px] relative">
-               <div class="max-w-[1114px] pb-[120px] relative z-2 pt-[3.75rem] sm:pt-[4.6875rem] md:pt-[5.9375rem] lg:pt-[6.875rem] xl:pt-[7.8125rem] 2xl:pt-[8.75rem]" >
-                  <h1 class="integral uppercase font-black mb-[24px] leading-[100%] text-[2.5rem] sm:text-[2.8125rem] md:text-[3.125rem] lg:text-[3.75rem] xl:text-[4.6875rem] 2xl:text-[5.5rem]">FIND GLASSES THAT REFLECT YOUR MOOD</h1>
-                  <p class="text-[var(--gray-color-01)] mb-[40px] max-w-[56.25rem]">Discover next-generation eyewear that adapts to you — MoodShades use emotion-sensing technology to change lens color in real time, reflecting how you feel. Whether you’re calm, excited, or frustrated, your glasses show it. It’s not just an accessory — it’s a new way to express yourself.</p>
-                  <button class="bg-white cursor-pointer satoshi font-medium text-black px-[32px] py-[16px] rounded-[62px] mb-[60px]" >Shop MoodShades</button>
-                  <div class="max-w-[817px] justify-between hidden md:flex">
-                     <div>
-                        <span class="text-[40px] font-bold">200+</span>
-                        <p class="text-[var(--gray-color-01)]">Fashion Partners</p>
-                     </div>
-                     <div>
-                        <span class="text-[40px] font-bold">2,000+</span>
-                        <p class="text-[var(--gray-color-01)]">Motion-Sensing Glasses Sold</p>
-                     </div>
-                     <div>
-                        <span class="text-[40px] font-bold">30,000+</span>
-                        <p class="text-[var(--gray-color-01)]">MoodShades Users </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="mx-[-15px] aspect-[880/736] overflow-hidden absolute bottom-0 right-[-130px]">
-                  <img id="slideshow" class="w-full h-full object-cover max-h-[786px]"  src="src/img/main-img-01.jpg" alt="Image">
-               </div>
-            </div>  -->
             <div class="flex flex-col max-w-[114.375rem] m-0 m-auto px-[15px] relative">
                <div class="max-w-[1114px]  relative z-2 pt-[3.75rem] sm:pt-[4.6875rem] md:pb-[7.6875rem] md:pt-[5.9375rem] lg:pt-[6.875rem] xl:pt-[7.8125rem] 2xl:pt-[8.75rem]" >
                   <h1 class="integral uppercase font-black mb-[24px] leading-[100%] text-[2.5rem] sm:text-[2.8125rem] md:text-[3.125rem] lg:text-[3.75rem] xl:text-[4.6875rem] 2xl:text-[5.5rem]">FIND GLASSES THAT REFLECT YOUR MOOD</h1>
