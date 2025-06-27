@@ -10,36 +10,6 @@
 </head>
 <body>
    <div class="min-h-full overflow-clip flex flex-col">
-      <!-- <header class="py-[24px] sticky h-100% top-0 left-0 z-50 bg-[var(--gray-color-04)] backdrop-blur-[1.25rem]">
-         <div class="max-w-[114.375rem] m-0 m-auto px-[15px]">
-            <div class="flex items-center justify-between gap-[10px]">
-               <div class="flex gap-[12px]">
-                  <img class="w-[55px] h-[32px]" src="src/img/logo.png" alt="Image">
-                  <span class="integral uppercase text-2xl font-extrabold">MDSh</span>
-               </div>
-               <nav>
-                  <ul class='flex gap-[80px] satoshi'>
-                     <li>
-                        <a class="font-satoshi" href='#'>Home</a>
-                     </li>
-                     <li>
-                        <a  href='#'>About</a>
-                     </li>
-                     <li>
-                        <a  href='#'>New Collection</a>
-                     </li>
-                     <li>
-                        <a href='#'>Collaboration</a>
-                     </li>
-                  </ul>
-               </nav>
-               <div>
-                  <button class="bg-black cursor-pointer satoshi font-medium text-white px-[32px] py-[16px] rounded-[62px]" >Shop MoodShades</button>
-                  <button type='button'><span></span></button>
-               </div>
-            </div>
-         </div> 
-      </header>  -->
       <header class="py-6 sticky top-0 left-0 w-full z-50 bg-[var(--gray-color-04)] backdrop-blur-[1.25rem]">
          <div class="max-w-[114.375rem] mx-auto px-4 flex items-center justify-between">
             <div class="flex items-center gap-3 z-50">
@@ -48,13 +18,13 @@
             </div>
             <nav class="hidden md:block">
                <ul class="flex gap-[80px] satoshi">
-               <li><a href="#">Home</a></li>
-               <li><a href="#">About</a></li>
-               <li><a href="#">New Collection</a></li>
-               <li><a href="#">Collaboration</a></li>
+                  <li><a class="transition-colors duration-300 ease-in-ou hover:text-[var(--blue-color-01)]" href="#">Home</a></li>
+                  <li><a class="transition-colors duration-300 ease-in-ou hover:text-[var(--blue-color-01)]" href="#">About</a></li>
+                  <li><a class="transition-colors duration-300 ease-in-ou hover:text-[var(--blue-color-01)]" href="#">New Collection</a></li>
+                  <li><a class="transition-colors duration-300 ease-in-ou hover:text-[var(--blue-color-01)]" href="#">Collaboration</a></li>
                </ul>
             </nav>
-            <button class="hidden md:inline-block bg-black text-white px-8 py-4 rounded-[62px] satoshi font-medium">
+            <button class="hidden md:inline-block cursor-pointer bg-black text-white px-8 py-4 rounded-[62px] transition-colors duration-300 ease-in-ou hover:bg-[var(--blue-color-01)] satoshi font-medium">
                Shop MoodShades
             </button>
             <button id="burger" aria-label="Open menu" class="relative z-[60] w-8 h-6 z-20 md:hidden group">
@@ -81,7 +51,7 @@
                <div class="max-w-[1114px]  relative z-2 pt-[3.75rem] sm:pt-[4.6875rem] md:pb-[7.6875rem] md:pt-[5.9375rem] lg:pt-[6.875rem] xl:pt-[7.8125rem] 2xl:pt-[8.75rem]" >
                   <h1 class="integral uppercase font-black mb-[24px] leading-[100%] text-[2.5rem] sm:text-[2.8125rem] md:text-[3.125rem] lg:text-[3.75rem] xl:text-[4.6875rem] 2xl:text-[5.5rem]">FIND GLASSES THAT REFLECT YOUR MOOD</h1>
                   <p class="text-[var(--gray-color-01)] mb-[40px] max-w-[56.25rem]">Discover next-generation eyewear that adapts to you — MoodShades use emotion-sensing technology to change lens color in real time, reflecting how you feel. Whether you’re calm, excited, or frustrated, your glasses show it. It’s not just an accessory — it’s a new way to express yourself.</p>
-                  <button class="bg-white w-full cursor-pointer satoshi font-medium text-black px-[32px] py-[16px] rounded-[62px] md:w-auto md:mb-[60px]" >Shop MoodShades</button>
+                  <button class="bg-white w-full cursor-pointer satoshi font-medium text-black px-[32px] py-[16px] rounded-[62px] transition-colors duration-300 ease-in-ou hover:bg-[var(--blue-color-01)] hover:text-white md:w-auto md:mb-[60px]" >Shop MoodShades</button>
                   <div class="max-w-[817px] justify-between hidden md:flex">
                      <div>
                         <span class="text-[40px] font-bold">200+</span>
@@ -167,11 +137,11 @@
                   <h2 class="integral uppercase font-bold tracking-[.0375rem] xl:max-w-[61.9375rem] text-[1.75rem] sm:text-[2.5rem] md:text-[2.8125rem] xl:max-w-[61.9375rem]  xl:text-[3.125rem]  [min-width:1350px]:text-[3.4375rem] 2xl:text-[3.75rem]">Let Your Feelings Take the Spotlight</h2>
                   <p class="satoshi text-[var(--gray-color-01)] xl:max-w-[45.0625rem] self-end">Your feelings are powerful — so why keep them hidden? MoodShades transforms every emotion into a statement, letting your mood shine through with vibrant, color-shifting lenses. It's not just smart eyewear — it's emotional technology designed to make self-expression effortless, intuitive, and bold. Whether you're calm, excited, or fired up, let the world see you — truly see you.</p>
                </div>
-               <div class="w-full m-0 m-auto"> <!-- constainer -->
+               <div class="w-full m-0 m-auto"> 
                   <ul id="cards" class="pl-0 grid grid-cols-[1fr]
                   grid-rows-[repeat(var(--cards),var(--cardHeight))]
                   gap-[var(--cardMargin)]
-                  pb-[calc(var(--cards)*var(--cardTopPadding))]"><!-- constainer -->
+                  pb-[calc(var(--cards)*var(--cardTopPadding))]">
                      <li id="card1" class="sticky top-[100px] pt-[calc(var(--index)*var(--cardTopPadding))]">
                         <div class="flex flex-col justify-between gap-[1.5rem] bg-[var(--blue-color-01)] px-[1rem] pt-[2.5rem] pb-[1.5rem] rounded-[1rem] h-[var(--cardHeight)] lg:px-[1.5rem]">
                            <div class="flex justify-between gap-[.625rem] items-center">
@@ -355,7 +325,7 @@
                      </div>
                   </div>
                </div>
-               <button id="btn-view" class="satoshi self-center cursor-pointer font-medium py-[1rem] px-[3.375rem] border border-[var(--black-color-01)] rounded-[3.875rem]">View All</button>
+               <button id="btn-view" class="satoshi self-center cursor-pointer font-medium py-[1rem] px-[3.375rem] border border-[var(--black-color-01)] rounded-[3.875rem] transition-colors duration-300 ease-in-ou hover:bg-[var(--blue-color-01)] hover:text-white">View All</button>
             </div>
          </section>
          <section class="pb-[3.75rem] sm:pb-[4.6875rem] md:pb-[5.9375rem] lg:pb-[6.875rem] xl:pb-[7.8125rem] 2xl:pb-[8.75rem]">
@@ -369,7 +339,7 @@
                               id="emailInput"
                               placeholder="Enter your email address"
                               type="email"
-                              class="w-full pl-12 pr-4 py-3 rounded-[3.875rem] bg-white satoshi border border-transparent transition-colors"
+                              class="w-full pl-12 pr-4 py-3 rounded-[3.875rem] bg-white satoshi border border-transparent focus:border-blue-500 focus:outline-none transition-colors"
                            />
                            <span
                               class="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 bg-no-repeat bg-center bg-contain"
@@ -379,7 +349,7 @@
                         <div class="flex flex-col gap-[.5rem]">
                            <button
                               id="subscribeBtn"
-                              class="satoshi bg-white cursor-pointer font-medium py-[1rem] px-[3.375rem] rounded-[3.875rem] leading-[20px]">
+                              class="satoshi bg-white cursor-pointer font-medium py-[1rem] px-[3.375rem] rounded-[3.875rem] leading-[20px] transition-colors duration-300 ease-in-ou hover:bg-[var(--blue-color-01)] hover:text-white">
                               Subscribe to Newsletter
                            </button>
                            <p id="message" class="text-[.625rem] self-center"></p>
@@ -397,10 +367,10 @@
                <div class="flex justify-between gap-[1.25rem] items-center mb-[2.5rem] sm:mb-[3.125rem] md:mb-[3.75rem] lg:mb-[4.375rem] xl:mb-[5rem]">
                   <h2  class="integral text-[1.75rem] uppercase font-bold tracking-[.0375rem] leading-[1.15] text-black sm:text-[2.5rem] md:text-[2.8125rem] xl:text-[3.125rem]  [min-width:1350px]:text-[3.4375rem] 2xl:text-[3.75rem]">Crafted Together, Felt Everywhere</h2>
                   <div class="hidden gap-[.75rem] items-center shrink-0 md:flex ">
-                     <button type="button" class="slider-prev p-[.75rem]">
+                     <button type="button" class="slider-prev p-[.75rem] cursor-pointer rounded-full border border-transparent hover:border-[var(--blue-color-01)] transition-colors duration-300">
                         <img class="w-[1.5rem] h-[1.5rem]" src="src/img/icon/small-arrow.svg" alt="Image">
                      </button>
-                     <button type="button" class="slider-next p-[.75rem]">
+                     <button type="button" class="slider-next p-[.75rem] cursor-pointer rounded-full border border-transparent hover:border-[var(--blue-color-01)] transition-colors duration-300">
                         <img class="rotate-180 w-[1.5rem] h-[1.5rem]"  src="src/img/icon/small-arrow.svg" alt="Image">
                      </button>
                   </div>
@@ -411,7 +381,7 @@
                            <video class="custom-video w-full h-full rounded-[1.5rem] object-cover" preload="metadata" poster="src/img/video/poster-01.png" >
                               <source src="src/img/video/video-01.webm" type="video/webm">
                            </video>
-                           <div class="cursor-pointer play-button w-[2.75rem] h-[2.75rem] p-[10px] bg-black rounded-[.375rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-[.playing]:hidden">
+                           <div class="cursor-pointer play-button w-[2.75rem] h-[2.75rem] p-[10px] bg-black rounded-[.375rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-[.playing]:hidden hover:scale-110 transition-transform duration-300">
                               <img src="src/img/icon/play.svg" alt="Play">
                            </div>
                         </div>
@@ -419,7 +389,7 @@
                            <video class="custom-video w-full h-full rounded-[1.5rem] object-cover" preload="metadata" poster="src/img/video/poster-02.png" >
                               <source src="src/img/video/video-02.webm" type="video/webm">
                            </video>
-                           <div class="cursor-pointer play-button w-[2.75rem] h-[2.75rem] p-[10px] bg-black rounded-[.375rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-[.playing]:hidden">
+                           <div class="cursor-pointer play-button w-[2.75rem] h-[2.75rem] p-[10px] bg-black rounded-[.375rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-[.playing]:hidden hover:scale-110 transition-transform duration-300">
                               <img src="src/img/icon/play.svg" alt="Play">
                            </div>
                         </div>
@@ -427,7 +397,7 @@
                            <video class="custom-video w-full h-full rounded-[1.5rem] object-cover" preload="metadata" poster="src/img/video/poster-03.png" >
                               <source src="src/img/video/video-03.webm" type="video/webm">
                            </video>
-                           <div class="cursor-pointer play-button w-[2.75rem] h-[2.75rem] p-[10px] bg-black rounded-[.375rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-[.playing]:hidden">
+                           <div class="cursor-pointer play-button w-[2.75rem] h-[2.75rem] p-[10px] bg-black rounded-[.375rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-[.playing]:hidden hover:scale-110 transition-transform duration-300">
                               <img src="src/img/icon/play.svg" alt="Play">
                            </div>
                         </div>
@@ -435,7 +405,7 @@
                            <video class="custom-video w-full h-full rounded-[1.5rem] object-cover" preload="metadata" poster="src/img/video/poster-04.png" >
                               <source src="src/img/video/video-04.webm" type="video/webm">
                            </video>
-                           <div class="cursor-pointer play-button w-[2.75rem] h-[2.75rem] p-[10px] bg-black rounded-[.375rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-[.playing]:hidden">
+                           <div class="cursor-pointer play-button w-[2.75rem] h-[2.75rem] p-[10px] bg-black rounded-[.375rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-[.playing]:hidden hover:scale-110 transition-transform duration-300">
                               <img src="src/img/icon/play.svg" alt="Play">
                            </div>
                         </div>
@@ -443,7 +413,7 @@
                            <video class="custom-video w-full h-full rounded-[1.5rem] object-cover" preload="metadata" poster="src/img/video/poster-01.png" >
                               <source src="src/img/video/video-01.webm" type="video/webm">
                            </video>
-                           <div class="cursor-pointer play-button w-[2.75rem] h-[2.75rem] p-[10px] bg-black rounded-[.375rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-[.playing]:hidden">
+                           <div class="cursor-pointer play-button w-[2.75rem] h-[2.75rem] p-[10px] bg-black rounded-[.375rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-[.playing]:hidden hover:scale-110 transition-transform duration-300">
                               <img src="src/img/icon/play.svg" alt="Play">
                            </div>
                         </div>
@@ -458,7 +428,7 @@
                   <h2 class="integral text-[1.75rem] uppercase font-bold tracking-[.0375rem] leading-[1.15] text-white sm:text-[2.5rem] md:text-[2.8125rem] xl:text-[3.125rem]  [min-width:1350px]:text-[3.4375rem] 2xl:text-[3.75rem]">Ready to Wear How You Feel?</h2>
                   <p class="satoshi text-[var(--gray-color-01)]">Shop our smart eyewear that shifts with your emotions — limited drops, expressive design, and technology that connects with your vibe.</p>
                </div>
-               <button class="satoshi shrink-0 bg-white cursor-pointer font-medium py-[1rem] px-[3.375rem] rounded-[3.875rem] leading-[20px]">Shop MoodShades Now</button>
+               <button class="satoshi shrink-0 bg-white cursor-pointer font-medium py-[1rem] px-[3.375rem] rounded-[3.875rem] leading-[20px] transition-colors duration-300 ease-in-ou hover:bg-[var(--blue-color-01)] hover:text-white">Shop MoodShades Now</button>
             </div>
          </section>
       </main>
@@ -481,8 +451,8 @@
                      </div>
                      <div class="flex justify-between">
                         <div class="flex gap-[1rem] items-center">
-                           <img src="src/img/icon/round-phone.svg" alt="Image">
-                           <p>(123) 456-7890</p>
+                           <img src="src/img/icon/round-phone.svg" alt="Phone icon" />
+                           <a href="tel:+1234567890">(123) 456-7890</a>
                         </div>
                         <div class="flex gap-[1rem] items-center">
                            <img src="src/img/icon/round-local-printshop.svg" alt="Image">
@@ -493,29 +463,45 @@
                   <div class="flex flex-col gap-[.75rem] lg:flex-row xl:gap-[1.5625rem] xl:items-center">
                      <p class="text-[var(--gray-color-03)] text-[.875rem] md:text-[1rem]">Social Media</p>
                      <div class="flex justify-between gap-[.3125rem] flex-grow">
-                        <a class="w-[1.5rem] h-[1.5rem]">
-                           <img  src="src/img/icon/facebook.svg" alt="Image">
+                        <a class="w-[1.5rem] h-[1.5rem] cursor-pointer text-black hover:text-[var(--blue-color-01)] transition-colors duration-300" href="https://www.facebook.com" target="_blank">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.6144 21H3.99346C3.44463 21 3 20.5551 3 20.0065V3.99345C3 3.44469 3.4447 3 3.99346 3H20.0066C20.5552 3 21 3.44469 21 3.99345V20.0065C21 20.5552 20.5552 21 20.0066 21H15.4197V14.0294H17.7594L18.1098 11.3128H15.4197V9.57849C15.4197 8.79198 15.6381 8.256 16.766 8.256L18.2045 8.25537V5.82566C17.9557 5.79255 17.1018 5.71859 16.1083 5.71859C14.0343 5.71859 12.6144 6.98457 12.6144 9.30945V11.3128H10.2687V14.0294H12.6144V21Z" fill="currentColor"/>
+                           </svg>
                         </a>
-                        <a class="w-[1.5rem] h-[1.5rem]">
-                           <img src="src/img/icon/twitter.svg" alt="Image">
+                        <a class="w-[1.5rem] h-[1.5rem] cursor-pointer text-black hover:text-[var(--blue-color-01)] transition-colors duration-300" href="https://twitter.com" target="_blank">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M21 6.77573C20.3386 7.07692 19.6265 7.28061 18.8796 7.37161C19.6424 6.90358 20.2277 6.16143 20.5034 5.27736C19.7892 5.71073 19 6.026 18.1569 6.19502C17.4849 5.45937 16.5246 5 15.4617 5C13.4237 5 11.7702 6.69556 11.7702 8.78657C11.7702 9.08342 11.8019 9.37161 11.8653 9.64897C8.79609 9.49079 6.07554 7.98483 4.25304 5.69122C3.93502 6.25244 3.7533 6.90358 3.7533 7.59697C3.7533 8.91008 4.40518 10.0693 5.3962 10.7486C4.79186 10.7302 4.22134 10.558 3.72266 10.2763V10.3229C3.72266 12.1582 4.99577 13.6891 6.68621 14.0358C6.37665 14.1246 6.05018 14.169 5.71315 14.169C5.47544 14.169 5.243 14.1463 5.01796 14.1018C5.48811 15.6056 6.85103 16.701 8.46751 16.7302C7.20391 17.7465 5.61067 18.3521 3.88114 18.3521C3.5832 18.3521 3.28843 18.3348 3 18.3001C4.63444 19.3727 6.57633 20 8.66086 20C15.4543 20 19.168 14.2308 19.168 9.22644C19.168 9.06176 19.1648 8.89707 19.1585 8.73564C19.8801 8.20152 20.5066 7.53521 21 6.77573Z" fill="currentColor"/>
+                           </svg>
                         </a>
-                        <a class="w-[1.5rem] h-[1.5rem]">
-                           <img src="src/img/icon/linkedin.svg" alt="Image">
+                        <a class="w-[1.5rem] h-[1.5rem] cursor-pointer text-black hover:text-[var(--blue-color-01)] transition-colors duration-300" href="https://www.linkedin.com" target="_blank">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.96191 20H3.4541V9.13086H6.96191V20ZM16.5479 9.02637C19.0411 9.02646 20.9999 10.5898 21 13.9561V20H17.0215V14.375C17.0214 12.903 16.3994 11.8985 15.0312 11.8984C13.9849 11.8984 13.4029 12.576 13.1318 13.2295C13.0302 13.4641 13.0459 13.7914 13.0459 14.1182V20H9.10449C9.1045 19.9978 9.15528 10.0367 9.10449 9.13086H13.0459V10.8369C13.2787 10.0911 14.5381 9.02637 16.5479 9.02637ZM5.14355 4C6.4375 4.00019 7.23325 4.81139 7.25879 5.88379C7.25879 6.9369 6.4376 7.77133 5.11914 7.77148H5.09375C3.82376 7.77148 3 6.93993 3 5.88672C3.00024 4.81324 3.84835 4 5.14355 4Z" fill="currentColor"/>
+                           </svg>
                         </a>
-                        <a class="w-[1.5rem] h-[1.5rem]">
-                           <img src="src/img/icon/youtube.svg" alt="Image">
+                        <a class="w-[1.5rem] h-[1.5rem] cursor-pointer text-black hover:text-[var(--blue-color-01)] transition-colors duration-300" href="https://www.youtube.com" target="_blank">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.0039 6C12.0039 6 15.7819 6.00038 18.3008 6.1875C18.6523 6.23024 19.4199 6.23333 20.1045 6.96973C20.6439 7.53057 20.8203 8.80469 20.8203 8.80469C20.824 8.83518 21 10.316 21 11.7959V13.1982C21 14.6941 20.8203 16.1895 20.8203 16.1895C20.82 16.1915 20.6433 17.4629 20.1045 18.0234C19.4199 18.7599 18.6523 18.7633 18.3008 18.8066C15.7819 18.9938 12 19 12 19C12 19 7.31988 18.9565 5.87988 18.8145C5.47937 18.7376 4.57964 18.7599 3.89453 18.0234C3.35586 17.4628 3.17998 16.1916 3.17969 16.1895C3.17969 16.1895 3.00002 14.6941 3 13.1982V11.7959C3 10.316 3.17604 8.83518 3.17969 8.80469C3.17969 8.80469 3.35522 7.53066 3.89453 6.96973C4.57966 6.23329 5.34709 6.23024 5.69922 6.1875C8.21809 6.00038 11.9961 6 11.9961 6H12.0039ZM10.1416 14.8975L15.0039 12.3096L10.1406 9.7041L10.1416 14.8975Z" fill="currentColor"/>
+                           </svg>
                         </a>
-                        <a class="w-[1.5rem] h-[1.5rem]">
-                           <img src="src/img/icon/instagram.svg" alt="Image">
+                        <a class="w-[1.5rem] h-[1.5rem] cursor-pointer text-black hover:text-[var(--blue-color-01)] transition-colors duration-300" href="https://www.instagram.com" target="_blank">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 3C14.4442 3 14.751 3.00991 15.7109 3.05371C16.6688 3.09742 17.3231 3.25018 17.8955 3.47266C18.4873 3.70261 18.9889 4.01046 19.4893 4.51074C19.9895 5.01106 20.2974 5.51275 20.5273 6.10449C20.7498 6.67691 20.9026 7.33124 20.9463 8.28906C20.9901 9.24901 21 9.55575 21 12C21 14.4442 20.9901 14.751 20.9463 15.7109C20.9026 16.6688 20.7498 17.3231 20.5273 17.8955C20.2974 18.4872 19.9895 18.9889 19.4893 19.4893C18.9889 19.9895 18.4872 20.2974 17.8955 20.5273C17.3231 20.7498 16.6688 20.9026 15.7109 20.9463C14.751 20.9901 14.4442 21 12 21C9.55575 21 9.24901 20.9901 8.28906 20.9463C7.33124 20.9026 6.67691 20.7498 6.10449 20.5273C5.51275 20.2974 5.01106 19.9895 4.51074 19.4893C4.01046 18.9889 3.70261 18.4873 3.47266 17.8955C3.25018 17.3231 3.09742 16.6688 3.05371 15.7109C3.00991 14.751 3 14.4442 3 12C3 9.55575 3.00991 9.24901 3.05371 8.28906C3.09742 7.33124 3.25018 6.67691 3.47266 6.10449C3.70261 5.51275 4.01046 5.01106 4.51074 4.51074C5.01106 4.01046 5.51275 3.70261 6.10449 3.47266C6.67691 3.25018 7.33124 3.09742 8.28906 3.05371C9.24901 3.00991 9.55575 3 12 3ZM12 4.62207C9.59696 4.62207 9.31224 4.63053 8.36328 4.67383C7.48593 4.71383 7.00952 4.86113 6.69238 4.98438C6.27229 5.14764 5.97215 5.34227 5.65723 5.65723C5.34227 5.97215 5.14764 6.27229 4.98438 6.69238C4.86113 7.00952 4.71383 7.48593 4.67383 8.36328C4.63053 9.31224 4.62207 9.59696 4.62207 12C4.62207 14.403 4.63053 14.6878 4.67383 15.6367C4.71383 16.5141 4.86113 16.9905 4.98438 17.3076C5.14764 17.7277 5.34231 18.0279 5.65723 18.3428C5.97215 18.6577 6.27229 18.8524 6.69238 19.0156C7.00952 19.1389 7.48593 19.2862 8.36328 19.3262C9.31213 19.3695 9.59678 19.3779 12 19.3779C14.4032 19.3779 14.6879 19.3695 15.6367 19.3262C16.5141 19.2862 16.9905 19.1389 17.3076 19.0156C17.7277 18.8524 18.0279 18.6577 18.3428 18.3428C18.6577 18.0279 18.8524 17.7277 19.0156 17.3076C19.1389 16.9905 19.2862 16.5141 19.3262 15.6367C19.3695 14.6878 19.3779 14.403 19.3779 12C19.3779 9.59696 19.3695 9.31224 19.3262 8.36328C19.2862 7.48593 19.1389 7.00952 19.0156 6.69238C18.8524 6.27229 18.6577 5.97215 18.3428 5.65723C18.0279 5.34227 17.7277 5.14764 17.3076 4.98438C16.9905 4.86113 16.5141 4.71383 15.6367 4.67383C14.6878 4.63053 14.403 4.62207 12 4.62207ZM12 7.37793C14.5524 7.37793 16.6221 9.44752 16.6221 12C16.6221 14.5524 14.5524 16.6221 12 16.6221C9.44752 16.6221 7.37793 14.5524 7.37793 12C7.37794 9.44753 9.44753 7.37794 12 7.37793ZM12 9C10.3431 9.00001 9.00001 10.3431 9 12C9 13.6568 10.3431 15 12 15C13.6568 15 15 13.6568 15 12C15 10.3431 13.6568 9 12 9ZM16.8047 6.11621C17.4008 6.11647 17.8835 6.59922 17.8838 7.19531C17.8838 7.79163 17.4009 8.27513 16.8047 8.27539C16.2082 8.27539 15.7246 7.79179 15.7246 7.19531C15.7249 6.59906 16.2084 6.11621 16.8047 6.11621Z" fill="currentColor"/>
+                           </svg>
                         </a>
-                        <a class="w-[1.5rem] h-[1.5rem]">
-                           <img src="src/img/icon/googleplus.svg" alt="Image">
+                        <a class="w-[1.5rem] h-[1.5rem] cursor-pointer text-black hover:text-[var(--blue-color-01)] transition-colors duration-300" href="https://www.google.com" target="_blank">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M8.7168 7C10.1983 7 11.5488 7.54227 12.5645 8.43164C11.3681 9.51858 11.4067 9.58279 10.9365 10.0352C10.3491 9.56784 9.70839 9.23242 8.7168 9.23242C6.84121 9.23252 5.37695 10.6956 5.37695 12.5C5.37695 14.3044 6.84121 15.7675 8.7168 15.7676C10.5702 15.7676 11.3233 14.998 11.8076 13.5859C10.9132 13.5859 8.7168 13.5889 8.7168 13.5889V11.4111H14.208C14.5903 14.0468 13.4361 18 8.7168 18C5.55947 17.9999 3 15.5375 3 12.5C3 9.46248 5.55947 7.0001 8.7168 7ZM19.0186 9.61426V11.5195H21V12.8809H19.0186V14.8418H17.6035V12.8809H15.5664V11.5195H17.6035V9.61426H19.0186Z" fill="currentColor"/>
+                           </svg>
                         </a>
-                        <a class="w-[1.5rem] h-[1.5rem]">
-                           <img src="src/img/icon/pinterest.svg" alt="Image">
+                        <a class="w-[1.5rem] h-[1.5rem] cursor-pointer text-black hover:text-[var(--blue-color-01)] transition-colors duration-300" href="https://www.pinterest.com" target="_blank">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.0005 3C7.03034 3 3 7.02928 3 12.0005C3 15.6848 5.21626 18.8515 8.38825 20.2433C8.36285 19.6156 8.38402 18.8599 8.54384 18.1762C8.71741 17.4459 9.70171 13.2727 9.70171 13.2727C9.70171 13.2727 9.41489 12.698 9.41489 11.8481C9.41489 10.5146 10.1886 9.51861 11.1506 9.51861C11.9688 9.51861 12.3646 10.1335 12.3646 10.8702C12.3646 11.6925 11.8397 12.9234 11.5698 14.0633C11.3443 15.0191 12.0482 15.797 12.9901 15.797C14.6952 15.797 15.8435 13.6072 15.8435 11.012C15.8435 9.04022 14.5153 7.56377 12.099 7.56377C9.36938 7.56377 7.66855 9.59905 7.66855 11.8725C7.66855 12.6578 7.89928 13.2103 8.26125 13.6379C8.42847 13.8358 8.4507 13.9141 8.39037 14.1406C8.34803 14.3046 8.24854 14.7047 8.20727 14.8624C8.14694 15.09 7.96278 15.1725 7.75745 15.0878C6.49903 14.5745 5.91374 13.1976 5.91374 11.6491C5.91374 9.09314 8.06968 6.02593 12.3456 6.02593C15.7821 6.02593 18.0439 8.5142 18.0439 11.1824C18.0439 14.7132 16.0817 17.3507 13.187 17.3507C12.2164 17.3507 11.302 16.8257 10.9887 16.2298C10.9887 16.2298 10.4659 18.3032 10.3558 18.7033C10.1653 19.3965 9.79167 20.0908 9.44981 20.6306C10.2595 20.8698 11.1147 21 12.0005 21C16.9707 21 21 16.9707 21 12.0005C21 7.02928 16.9707 3 12.0005 3Z" fill="currentColor"/>
+                           </svg>
                         </a>
-                        <a class="w-[1.5rem] h-[1.5rem]">
-                           <img src="src/img/icon/rss.svg" alt="Image">
+                        <a class="w-[1.5rem] h-[1.5rem] cursor-pointer text-black hover:text-[var(--blue-color-01)] transition-colors duration-300" href="https://www.google.com" target="_blank">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M5.57129 15.8574C6.99135 15.8574 8.14258 17.0086 8.14258 18.4287C8.1425 19.8487 6.9913 21 5.57129 21C4.15142 20.9998 3.00008 19.8486 3 18.4287C3 17.0087 4.15137 15.8576 5.57129 15.8574ZM3 9C9.61686 9 15 14.3831 15 21H11.5713C11.5713 16.2737 7.72623 12.4287 3 12.4287V9ZM3 3C12.925 3 21 11.0749 21 21H17.5713C17.5713 12.9649 11.035 6.42871 3 6.42871V3Z" fill="currentColor"/>
+                           </svg>
                         </a>
                      </div>
                   </div>
@@ -525,16 +511,16 @@
                <div>
                   <ul class='flex gap-[.3125rem] justify-between satoshi text-[.75rem] md:text-[.875rem] lg:text-[1rem]'>
                      <li>
-                        <a href='#'>About</a>
+                        <a class="transition-colors duration-300 ease-in-ou hover:text-[var(--blue-color-01)]" href='#'>About</a>
                      </li>
                      <li>
-                        <a  href='#'>New Collection</a>
+                        <a class="transition-colors duration-300 ease-in-ou hover:text-[var(--blue-color-01)]" href='#'>New Collection</a>
                      </li>
                      <li>
-                        <a  href='#'>Collaboration</a>
+                        <a class="transition-colors duration-300 ease-in-ou hover:text-[var(--blue-color-01)]" href='#'>Collaboration</a>
                      </li>
                      <li>
-                        <a href='#'>Privacy Policy</a>
+                        <a class="transition-colors duration-300 ease-in-ou hover:text-[var(--blue-color-01)]" href='#'>Privacy Policy</a>
                      </li>
                   </ul>
                </div>
