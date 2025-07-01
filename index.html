@@ -17,34 +17,32 @@
                <span class="integral uppercase text-2xl font-extrabold">MDSh</span>
             </div>
             <nav class="hidden md:block">
-               <ul class="flex gap-[80px] satoshi">
-                  <li><a class="transition-colors duration-300 ease-in-ou hover:text-[var(--blue-color-01)]" href="#">Home</a></li>
-                  <li><a class="transition-colors duration-300 ease-in-ou hover:text-[var(--blue-color-01)]" href="#">About</a></li>
-                  <li><a class="transition-colors duration-300 ease-in-ou hover:text-[var(--blue-color-01)]" href="#">New Collection</a></li>
-                  <li><a class="transition-colors duration-300 ease-in-ou hover:text-[var(--blue-color-01)]" href="#">Collaboration</a></li>
+               <ul class="flex gap-[1.5625rem] satoshi lg:gap-[3.4375rem] xl:gap-[5rem]">
+               <li><a class="transition-colors duration-300 hover:text-[var(--blue-color-01)]" href="#">Home</a></li>
+               <li><a class="transition-colors duration-300 hover:text-[var(--blue-color-01)]" href="#">About</a></li>
+               <li><a class="transition-colors duration-300 hover:text-[var(--blue-color-01)]" href="#">New Collection</a></li>
+               <li><a class="transition-colors duration-300 hover:text-[var(--blue-color-01)]" href="#">Collaboration</a></li>
                </ul>
             </nav>
-            <button class="hidden md:inline-block cursor-pointer bg-black text-white px-8 py-4 rounded-[62px] transition-colors duration-300 ease-in-ou hover:bg-[var(--blue-color-01)] satoshi font-medium">
-               Shop MoodShades
-            </button>
-            <button id="burger" aria-label="Open menu" class="relative z-[60] w-8 h-6 z-20 md:hidden group">
+            <button class="hidden md:inline-block bg-black text-white px-8 py-4 rounded-[62px] transition-colors duration-300 hover:bg-[var(--blue-color-01)] satoshi font-medium cursor-pointer"> Shop MoodShades</button>
+            <button id="burger" aria-label="Open menu" class="relative z-[60] w-8 h-6 md:hidden group">
                <span class="absolute top-1/2 -translate-y-[10px] left-0 w-full h-0.5 bg-black transition-all duration-300 origin-center group-[.open]:translate-y-0 group-[.open]:rotate-45"></span>
                <span class="absolute top-1/2 -translate-y-1/2 left-0 w-full h-0.5 bg-black transition-opacity duration-300 group-[.open]:opacity-0"></span>
-               <span class="absolute top-1/2 translate-y-[10px] left-0 w-full h-0.5 bg-black transition-all duration-300 origin-center group-[.open]:translate-y-0 group-[.open]:-rotate-45"></span>
-            </button>
-         </div>
-         <div id="mobileMenu" class="fixed inset-0 h-[100vh] p-[50px] z-40 bg-white flex flex-col justify-center gap-10 satoshi translate-x-full transition-transform duration-300 md:hidden">
-            <ul class="flex flex-col gap-8 text-2xl ">
-               <li><a href="#">Home</a></li>
-               <li><a href="#">About</a></li>
-               <li><a href="#">New Collection</a></li>
-               <li><a href="#">Collaboration</a></li>
-            </ul>
-            <button class="bg-black text-white px-8 py-4 rounded-[62px] satoshi font-medium">
-               Shop MoodShades
+               <span class="absolute top-1/2  translate-y-[10px] left-0 w-full h-0.5 bg-black transition-all duration-300 origin-center group-[.open]:translate-y-0 group-[.open]:-rotate-45"></span>
             </button>
          </div>
       </header>
+      <div id="mobileMenu" class="fixed inset-0 h-screen pt-[96px] pb-[50px] px-[50px] z-40 bg-white flex flex-col gap-10 satoshi translate-x-full transition-transform duration-300 md:hidden overflow-y-auto overscroll-contain">
+         <ul class="flex flex-col gap-8 text-2xl">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">New Collection</a></li>
+            <li><a href="#">Collaboration</a></li>
+         </ul>
+         <button class="bg-black text-white px-8 py-4 rounded-[62px] satoshi font-medium">
+            Shop MoodShades
+         </button>
+      </div>
       <main class="flex-grow">
          <section class="satoshi overflow-hidden text-white bg-[linear-gradient(90deg,_#000_0%,_#000_46.42%,_#0A0303_100%)]">
             <div class="flex flex-col max-w-[114.375rem] m-0 m-auto px-[15px] relative">
@@ -80,7 +78,6 @@
                <img src="src/img/icon/prada.svg" alt="Prada" />
                <img src="src/img/icon/calvinKlein.svg" alt="Calvin Klein" />
 
-               <!-- Друга копія — для безперервності -->
                <img src="src/img/icon/versage.svg" alt="Versage" />
                <img src="src/img/icon/zara.svg" alt="Zara" />
                <img src="src/img/icon/gucci.svg" alt="Gucci" />

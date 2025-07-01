@@ -44,10 +44,8 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-blue-500: oklch(62.3% 0.214 259.815);
-    --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
-    --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -229,9 +227,6 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
-  .inset-x-0 {
-    inset-inline: calc(var(--spacing) * 0);
-  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -240,9 +235,6 @@
   }
   .top-\[100px\] {
     top: 100px;
-  }
-  .bottom-0 {
-    bottom: calc(var(--spacing) * 0);
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
@@ -525,6 +517,9 @@
   .gap-\[1\.25rem\] {
     gap: 1.25rem;
   }
+  .gap-\[1\.5625rem\] {
+    gap: 1.5625rem;
+  }
   .gap-\[1rem\] {
     gap: 1rem;
   }
@@ -557,6 +552,12 @@
   }
   .overflow-hidden {
     overflow: hidden;
+  }
+  .overflow-y-auto {
+    overflow-y: auto;
+  }
+  .overscroll-contain {
+    overscroll-behavior: contain;
   }
   .rounded-3xl {
     border-radius: var(--radius-3xl);
@@ -708,6 +709,9 @@
   .px-\[32px\] {
     padding-inline: 32px;
   }
+  .px-\[50px\] {
+    padding-inline: 50px;
+  }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
@@ -744,6 +748,9 @@
   .pt-\[3\.75rem\] {
     padding-top: 3.75rem;
   }
+  .pt-\[96px\] {
+    padding-top: 96px;
+  }
   .pt-\[calc\(var\(--index\)\*var\(--cardTopPadding\)\)\] {
     padding-top: calc(var(--index) * var(--cardTopPadding));
   }
@@ -758,6 +765,9 @@
   }
   .pb-\[3\.75rem\] {
     padding-bottom: 3.75rem;
+  }
+  .pb-\[50px\] {
+    padding-bottom: 50px;
   }
   .pb-\[calc\(var\(--cards\)\*var\(--cardTopPadding\)\)\] {
     padding-bottom: calc(var(--cards) * var(--cardTopPadding));
@@ -801,9 +811,6 @@
   }
   .text-\[2\.5rem\] {
     font-size: 2.5rem;
-  }
-  .text-\[3\.75rem\] {
-    font-size: 3.75rem;
   }
   .text-\[40px\] {
     font-size: 40px;
@@ -911,16 +918,6 @@
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
-  }
-  .group-\[\.open\]\:top-3 {
-    &:is(:where(.group):is(.open) *) {
-      top: calc(var(--spacing) * 3);
-    }
-  }
-  .group-\[\.open\]\:bottom-3 {
-    &:is(:where(.group):is(.open) *) {
-      bottom: calc(var(--spacing) * 3);
-    }
   }
   .group-\[\.open\]\:translate-y-0 {
     &:is(:where(.group):is(.open) *) {
@@ -1127,6 +1124,11 @@
       gap: 1.625rem;
     }
   }
+  .md\:gap-\[2\.5rem\] {
+    @media (width >= 48rem) {
+      gap: 2.5rem;
+    }
+  }
   .md\:gap-\[3\.125rem\] {
     @media (width >= 48rem) {
       gap: 3.125rem;
@@ -1282,6 +1284,11 @@
       gap: 3.75rem;
     }
   }
+  .lg\:gap-\[3\.4375rem\] {
+    @media (width >= 64rem) {
+      gap: 3.4375rem;
+    }
+  }
   .lg\:justify-self-end {
     @media (width >= 64rem) {
       justify-self: flex-end;
@@ -1410,6 +1417,16 @@
   .xl\:gap-\[4\.375rem\] {
     @media (width >= 80rem) {
       gap: 4.375rem;
+    }
+  }
+  .xl\:gap-\[5rem\] {
+    @media (width >= 80rem) {
+      gap: 5rem;
+    }
+  }
+  .xl\:gap-\[80px\] {
+    @media (width >= 80rem) {
+      gap: 80px;
     }
   }
   .xl\:px-\[2\.5rem\] {

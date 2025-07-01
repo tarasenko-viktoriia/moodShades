@@ -1,21 +1,19 @@
-const burger = document.getElementById("burger");
-const menu = document.getElementById("mobileMenu");
+const burger = document.getElementById('burger');
+const menu   = document.getElementById('mobileMenu');
 
-burger.addEventListener("click", () => {
-   burger.classList.toggle("open");
-   menu.classList.toggle("translate-x-full");
-
-   document.body.classList.toggle("overflow-hidden");
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  menu.classList.toggle('translate-x-full');
+  document.body.classList.toggle('overflow-hidden');
 });
 
-menu.querySelectorAll("a, button").forEach((el) =>
-   el.addEventListener("click", () => {
-      burger.classList.remove("open");
-      menu.classList.add("translate-x-full");
-
-      document.body.classList.remove("overflow-hidden");
-   })
-)
+menu.querySelectorAll('a,button').forEach(el =>
+  el.addEventListener('click', () => {
+    burger.classList.remove('open');
+    menu.classList.add('translate-x-full');
+    document.body.classList.remove('overflow-hidden');
+  })
+);
 
 
 const img = [
