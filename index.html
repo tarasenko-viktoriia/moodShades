@@ -28,9 +28,9 @@
                Shop MoodShades
             </button>
             <button id="burger" aria-label="Open menu" class="relative z-[60] w-8 h-6 z-20 md:hidden group">
-               <span class="absolute block w-full h-0.5 bg-black transition-all duration-300 top-0 group-[.open]:top-3 group-[.open]:rotate-45"></span>
-               <span class="absolute block w-full h-0.5 bg-black transition-all duration-300 top-1/2 -translate-y-1/2 group-[.open]:opacity-0"></span>
-               <span class="absolute block w-full h-0.5 bg-black transition-all duration-300 bottom-0 group-[.open]:bottom-3 group-[.open]:-rotate-45"></span>
+               <span class="absolute top-1/2 -translate-y-[10px] left-0 w-full h-0.5 bg-black transition-all duration-300 origin-center group-[.open]:translate-y-0 group-[.open]:rotate-45"></span>
+               <span class="absolute top-1/2 -translate-y-1/2 left-0 w-full h-0.5 bg-black transition-opacity duration-300 group-[.open]:opacity-0"></span>
+               <span class="absolute top-1/2 translate-y-[10px] left-0 w-full h-0.5 bg-black transition-all duration-300 origin-center group-[.open]:translate-y-0 group-[.open]:-rotate-45"></span>
             </button>
          </div>
          <div id="mobileMenu" class="fixed inset-0 h-[100vh] p-[50px] z-40 bg-white flex flex-col justify-center gap-10 satoshi translate-x-full transition-transform duration-300 md:hidden">
@@ -349,7 +349,7 @@
                         <div class="flex flex-col gap-[.5rem]">
                            <button
                               id="subscribeBtn"
-                              class="satoshi bg-white cursor-pointer font-medium py-[1rem] px-[3.375rem] rounded-[3.875rem] leading-[20px] transition-colors duration-300 ease-in-ou hover:bg-[var(--blue-color-01)] hover:text-white">
+                              class="satoshi bg-white cursor-pointer font-medium py-[1rem] px-[1.875rem] rounded-[3.875rem] leading-[20px] transition-colors duration-300 ease-in-ou hover:bg-[var(--blue-color-01)] hover:text-white md:px-[3.375rem]">
                               Subscribe to Newsletter
                            </button>
                            <p id="message" class="text-[.625rem] self-center"></p>
@@ -358,7 +358,7 @@
                   </div>
                </div>
                <div id="successBlock" class="bg-black p-[6.25rem] rounded-[1.5rem] flex justify-center hidden" >
-                  <h2  class="integral text-[3.75rem] uppercase font-bold tracking-[.0375rem] leading-[1.15] text-white max-w-[55rem] text-center">You are In. Thanks for Subscribing</h2>
+                  <h2  class="integral uppercase font-bold tracking-[.0375rem] leading-[1.15] text-white max-w-[55rem] text-center text-[1.75rem] sm:text-[2.5rem] md:text-[2.8125rem] xl:text-[3.125rem] 2xl:text-[3.75rem]">You are In. Thanks for Subscribing</h2>
                </div>
             </div>
          </section>

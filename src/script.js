@@ -1,20 +1,22 @@
 const burger = document.getElementById("burger");
-  const menu = document.getElementById("mobileMenu");
+const menu = document.getElementById("mobileMenu");
 
-  burger.addEventListener("click", () => {
-    // анімація бургер-іконки
-    burger.classList.toggle("open");
-    // показ / приховання меню
-    menu.classList.toggle("translate-x-full");
-  });
+burger.addEventListener("click", () => {
+   burger.classList.toggle("open");
+   menu.classList.toggle("translate-x-full");
 
-  // Закривати меню після кліку по посиланню чи кнопці
-  menu.querySelectorAll("a,button").forEach((el) =>
-    el.addEventListener("click", () => {
+   document.body.classList.toggle("overflow-hidden");
+});
+
+menu.querySelectorAll("a, button").forEach((el) =>
+   el.addEventListener("click", () => {
       burger.classList.remove("open");
       menu.classList.add("translate-x-full");
-    })
-  );
+
+      document.body.classList.remove("overflow-hidden");
+   })
+)
+
 
 const img = [
    'src/img/main-img-01.jpg',
