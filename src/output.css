@@ -248,9 +248,6 @@
   .z-2 {
     z-index: 2;
   }
-  .z-20 {
-    z-index: 20;
-  }
   .z-40 {
     z-index: 40;
   }
@@ -268,6 +265,9 @@
   }
   .mx-\[-15px\] {
     margin-inline: -15px;
+  }
+  .mx-\[50px\] {
+    margin-inline: 50px;
   }
   .mx-auto {
     margin-inline: auto;
@@ -305,6 +305,9 @@
   .inline-block {
     display: inline-block;
   }
+  .inline-flex {
+    display: inline-flex;
+  }
   .aspect-\[344\/298\] {
     aspect-ratio: 344/298;
   }
@@ -335,14 +338,14 @@
   .h-\[3\.25rem\] {
     height: 3.25rem;
   }
+  .h-\[30px\] {
+    height: 30px;
+  }
   .h-\[32px\] {
     height: 32px;
   }
   .h-\[37\.5rem\] {
     height: 37.5rem;
-  }
-  .h-\[100vh\] {
-    height: 100vh;
   }
   .h-\[var\(--cardHeight\)\] {
     height: var(--cardHeight);
@@ -388,9 +391,6 @@
   }
   .w-full {
     width: 100%;
-  }
-  .w-max {
-    width: max-content;
   }
   .max-w-\[8\.625rem\] {
     max-width: 8.625rem;
@@ -525,12 +525,6 @@
   }
   .gap-\[2\.5rem\] {
     gap: 2.5rem;
-  }
-  .gap-\[80px\] {
-    gap: 80px;
-  }
-  .gap-\[100px\] {
-    gap: 100px;
   }
   .gap-\[var\(--cardMargin\)\] {
     gap: var(--cardMargin);
@@ -673,9 +667,6 @@
   .p-\[20px\] {
     padding: 20px;
   }
-  .p-\[50px\] {
-    padding: 50px;
-  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -778,9 +769,6 @@
   .pl-12 {
     padding-left: calc(var(--spacing) * 12);
   }
-  .pl-\[15px\] {
-    padding-left: 15px;
-  }
   .text-center {
     text-align: center;
   }
@@ -862,6 +850,9 @@
   .tracking-\[\.0375rem\] {
     --tw-tracking: .0375rem;
     letter-spacing: .0375rem;
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
   }
   .text-\[var\(--gray-color-01\)\] {
     color: var(--gray-color-01);
@@ -1122,11 +1113,6 @@
   .md\:gap-\[1\.625rem\] {
     @media (width >= 48rem) {
       gap: 1.625rem;
-    }
-  }
-  .md\:gap-\[2\.5rem\] {
-    @media (width >= 48rem) {
-      gap: 2.5rem;
     }
   }
   .md\:gap-\[3\.125rem\] {
@@ -1424,11 +1410,6 @@
       gap: 5rem;
     }
   }
-  .xl\:gap-\[80px\] {
-    @media (width >= 80rem) {
-      gap: 80px;
-    }
-  }
   .xl\:px-\[2\.5rem\] {
     @media (width >= 80rem) {
       padding-inline: 2.5rem;
@@ -1609,16 +1590,16 @@
 .integral {
   font-family: 'IntegralCF';
 }
-@keyframes scroll {
-  0% {
+@keyframes slide {
+  from {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(-50%);
+  to {
+    transform: translateX(-100%);
   }
 }
 .logos-track {
-  animation: scroll 30s linear infinite;
+  animation: 7s slide infinite linear;
 }
 .hidden-card {
   display: none;

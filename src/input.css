@@ -69,13 +69,17 @@
    font-family: 'IntegralCF';
 }
 
-@keyframes scroll {
-   0% { transform: translateX(0); }
-   100% { transform: translateX(-50%); }
+@keyframes slide {
+   from {
+      transform: translateX(0);
+   }
+   to{
+      transform: translateX(-100%);
+   }     
 }
 
 .logos-track {
-   animation: scroll 30s linear infinite;
+   animation: 7s slide infinite linear;
 }
 
 
