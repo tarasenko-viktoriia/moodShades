@@ -266,8 +266,8 @@
   .mx-\[-15px\] {
     margin-inline: -15px;
   }
-  .mx-\[50px\] {
-    margin-inline: 50px;
+  .mx-\[1\.25rem\] {
+    margin-inline: 1.25rem;
   }
   .mx-auto {
     margin-inline: auto;
@@ -305,9 +305,6 @@
   .inline-block {
     display: inline-block;
   }
-  .inline-flex {
-    display: inline-flex;
-  }
   .aspect-\[344\/298\] {
     aspect-ratio: 344/298;
   }
@@ -329,6 +326,9 @@
   .h-\[1\.5rem\] {
     height: 1.5rem;
   }
+  .h-\[1\.25rem\] {
+    height: 1.25rem;
+  }
   .h-\[1\.75rem\] {
     height: 1.75rem;
   }
@@ -337,9 +337,6 @@
   }
   .h-\[3\.25rem\] {
     height: 3.25rem;
-  }
-  .h-\[30px\] {
-    height: 30px;
   }
   .h-\[32px\] {
     height: 32px;
@@ -391,6 +388,9 @@
   }
   .w-full {
     width: 100%;
+  }
+  .w-max {
+    width: max-content;
   }
   .max-w-\[8\.625rem\] {
     max-width: 8.625rem;
@@ -456,6 +456,9 @@
   }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -712,6 +715,9 @@
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
   }
+  .py-\[1\.25rem\] {
+    padding-block: 1.25rem;
+  }
   .py-\[1rem\] {
     padding-block: 1rem;
   }
@@ -726,9 +732,6 @@
   }
   .py-\[16px\] {
     padding-block: 16px;
-  }
-  .py-\[46px\] {
-    padding-block: 46px;
   }
   .pt-\[1\.5rem\] {
     padding-top: 1.5rem;
@@ -1205,6 +1208,11 @@
       font-size: 3.125rem;
     }
   }
+  .lg\:mx-\[3\.125rem\] {
+    @media (width >= 64rem) {
+      margin-inline: 3.125rem;
+    }
+  }
   .lg\:mb-\[3\.75rem\] {
     @media (width >= 64rem) {
       margin-bottom: 3.75rem;
@@ -1218,6 +1226,11 @@
   .lg\:flex {
     @media (width >= 64rem) {
       display: flex;
+    }
+  }
+  .lg\:h-\[1\.875rem\] {
+    @media (width >= 64rem) {
+      height: 1.875rem;
     }
   }
   .lg\:w-\[6\.875rem\] {
@@ -1308,6 +1321,11 @@
   .lg\:py-\[6\.875rem\] {
     @media (width >= 64rem) {
       padding-block: 6.875rem;
+    }
+  }
+  .lg\:py-\[46px\] {
+    @media (width >= 64rem) {
+      padding-block: 46px;
     }
   }
   .lg\:pt-\[6\.875rem\] {
@@ -1590,16 +1608,18 @@
 .integral {
   font-family: 'IntegralCF';
 }
-@keyframes slide {
-  from {
+@keyframes marqueeAnim {
+  0% {
     transform: translateX(0);
   }
-  to {
+  100% {
     transform: translateX(-100%);
   }
 }
-.logos-track {
-  animation: 7s slide infinite linear;
+#marquee-track {
+  display: flex;
+  white-space: nowrap;
+  will-change: transform;
 }
 .hidden-card {
   display: none;

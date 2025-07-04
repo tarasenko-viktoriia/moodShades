@@ -138,3 +138,48 @@ subscribeBtn.addEventListener('click', () => {
       message.style.color = 'red';
    }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+   const track   = document.getElementById('marquee-track');
+   const content = document.getElementById('marquee-content');
+   const SPEED   = 100;    
+
+   function buildMarquee() {
+      track.querySelectorAll('.clone').forEach(el => el.remove());
+
+      const containerWidth = track.parentElement.offsetWidth;
+      const contentWidth   = content.scrollWidth;
+      let   totalWidth     = contentWidth;
+
+      while (totalWidth < containerWidth + contentWidth) {
+         const clone = content.cloneNode(true);
+         clone.classList.add('clone');
+         track.appendChild(clone);
+         totalWidth += clone.scrollWidth;
+      }
+
+      injectKeyframes(contentWidth);
+      track.style.animation = `marqueeAnim ${contentWidth / SPEED}s linear infinite`;
+   }
+
+   function injectKeyframes(shift) {
+      let style = document.getElementById('marquee-style');
+      if (!style) {
+         style = document.createElement('style');
+         style.id = 'marquee-style';
+         document.head.appendChild(style);
+      }
+      style.textContent = `
+         @keyframes marqueeAnim {
+         0%   { transform: translateX(0); }
+         100% { transform: translateX(-${shift}px); }
+         }
+      `;
+   }
+
+   buildMarquee();
+   window.addEventListener('resize', () => {
+      track.style.animation = 'none';
+      buildMarquee();
+   });
+});

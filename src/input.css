@@ -69,20 +69,20 @@
    font-family: 'IntegralCF';
 }
 
-@keyframes slide {
-   from {
+@keyframes marqueeAnim {
+   0% {
       transform: translateX(0);
    }
-   to{
+   100% {
       transform: translateX(-100%);
-   }     
+   }
 }
 
-.logos-track {
-   animation: 7s slide infinite linear;
+#marquee-track {  
+   display: flex;
+   white-space: nowrap;
+   will-change: transform;
 }
-
-
 .hidden-card {
    display: none;
    opacity: 0;
