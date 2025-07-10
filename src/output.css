@@ -353,6 +353,9 @@
   .h-screen {
     height: 100vh;
   }
+  .max-h-\[736px\] {
+    max-height: 736px;
+  }
   .max-h-\[786px\] {
     max-height: 786px;
   }
@@ -477,6 +480,9 @@
   }
   .flex-col {
     flex-direction: column;
+  }
+  .content-center {
+    align-content: center;
   }
   .items-center {
     align-items: center;
@@ -1650,6 +1656,9 @@
 }
 .pagination-bullet--active {
   background-color: var(--color-black);
+}
+.swiper-autoheight, .swiper-autoheight .swiper-slide {
+  height: 100%;
 }
 @property --tw-translate-x {
   syntax: "*";
